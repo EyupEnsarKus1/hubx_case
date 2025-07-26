@@ -5,24 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gen.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hubx_case.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_fonts.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_padding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_sizes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_textstyles.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_textstyles.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_theme.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
