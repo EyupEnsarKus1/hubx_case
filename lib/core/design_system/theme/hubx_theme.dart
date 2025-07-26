@@ -108,9 +108,15 @@ class AppTheme {
     scaffoldBackgroundColor: HubxColors.scaffoldBackground,
     primaryColor: HubxColors.primary,
     colorScheme: const ColorScheme.light(primary: HubxColors.primary, background: HubxColors.scaffoldBackground),
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
+      titleTextStyle: TextStyle(
+        fontFamily: HubxFonts.primaryFont,
+        fontWeight: HubxFontWeights.semiBold,
+        fontSize: HubxSizes.size20,
+        color: HubxColors.mainText,
+      ),
       centerTitle: true,
       iconTheme: IconThemeData(color: HubxColors.mainText),
     ),
