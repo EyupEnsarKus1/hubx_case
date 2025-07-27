@@ -8,6 +8,7 @@ class OnboardLegacyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
+      textAlign: TextAlign.center,
       text: const TextSpan(
         style: TextStyle(
           color: HubxColors.onboardLegacyTextColor,
@@ -47,4 +48,4 @@ class OnboardLegacyText extends StatelessWidget {
       ),
     );
   }
-} 
+}

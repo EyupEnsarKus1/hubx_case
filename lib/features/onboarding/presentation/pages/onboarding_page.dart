@@ -9,6 +9,7 @@ import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 import 'package:hubx_case/core/services/onboard_service.dart';
 import 'package:hubx_case/features/home/presentation/pages/home_page.dart';
+import 'package:hubx_case/features/onboarding/presentation/widgets/onboard_legacy_text.dart';
 import '../../../../generated/assets.gen.dart';
 import '../../data/onboard_data.dart';
 
@@ -56,6 +57,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
           // İçerik
           SafeArea(
+            bottom: false,
             child: Positioned.fill(
               child: Column(
                 children: [
@@ -112,24 +114,30 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     },
                     title: onboardItems[_currentPage].buttonText,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: List.generate(
-                      onboardItems.length,
-                      (index) => Container(
-                        margin: HubxPadding.p4.horizontal,
-                        width: HubxSizes.size8,
-                        height: HubxSizes.size8,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: index == _currentPage
-                              ? HubxColors.mainText
-                              : HubxColors.mainText.withValues(
-                                  alpha: .25,
+                  SizedBox(
+                    height: HubxSizes.size56,
+                    child: _currentPage == 0
+                        ? const OnboardLegacyText()
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: List.generate(
+                              onboardItems.length,
+                              (index) => Container(
+                                margin: HubxPadding.p4.horizontal,
+                                width: HubxSizes.size8,
+                                height: HubxSizes.size8,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: index == _currentPage
+                                      ? HubxColors.mainText
+                                      : HubxColors.mainText.withValues(
+                                          alpha: .25,
+                                        ),
                                 ),
-                        ),
-                      ),
-                    ),
+                              ),
+                            ),
+                          ),
                   ),
                 ],
               ),
