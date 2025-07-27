@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_colors.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
@@ -16,6 +17,8 @@ class OnboardWelcomeTitle extends StatelessWidget {
           text: 'Welcome to ',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
             fontSize: HubxSizes.size28,
+            color: HubxColors.mainText,
+
             fontWeight: HubxFontWeights.light,
           ),
           children: <TextSpan>[
@@ -23,6 +26,7 @@ class OnboardWelcomeTitle extends StatelessWidget {
               text: 'PlantApp',
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                 fontSize: HubxSizes.size28,
+                color: HubxColors.mainText,
                 fontWeight: HubxFontWeights.semiBold,
               ),
             ),

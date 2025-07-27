@@ -21,6 +21,13 @@ class $AssetsFontsGen {
   List<String> get values => [roboto];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// Directory path: assets/icons/svg_icons
+  $AssetsIconsSvgIconsGen get svgIcons => const $AssetsIconsSvgIconsGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -32,6 +39,13 @@ class $AssetsImagesGen {
 
   /// Directory path: assets/images/paywall
   $AssetsImagesPaywallGen get paywall => const $AssetsImagesPaywallGen();
+}
+
+class $AssetsIconsSvgIconsGen {
+  const $AssetsIconsSvgIconsGen();
+
+  /// Directory path: assets/icons/svg_icons/paywall
+  $AssetsIconsSvgIconsPaywallGen get paywall => const $AssetsIconsSvgIconsPaywallGen();
 }
 
 class $AssetsImagesBackgroundGen {
@@ -73,10 +87,24 @@ class $AssetsImagesPaywallGen {
   List<AssetGenImage> get values => [paywallHeaderImage];
 }
 
+class $AssetsIconsSvgIconsPaywallGen {
+  const $AssetsIconsSvgIconsPaywallGen();
+
+  /// File path: assets/icons/svg_icons/paywall/faster.svg
+  String get faster => 'assets/icons/svg_icons/paywall/faster.svg';
+
+  /// File path: assets/icons/svg_icons/paywall/unlimited.svg
+  String get unlimited => 'assets/icons/svg_icons/paywall/unlimited.svg';
+
+  /// List of all assets
+  List<String> get values => [faster, unlimited];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
