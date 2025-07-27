@@ -1,0 +1,122 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../features/base_screen/base_screen.dart';
+import '../../features/diagnose/presentation/pages/diagnose_page.dart';
+import '../../features/home/presentation/pages/home_page.dart';
+import '../../features/my_garden/presentation/pages/my_garden_page.dart';
+import '../../features/onboarding/presentation/pages/onboarding_page.dart';
+import '../../features/paywall/presentation/pages/paywall_page.dart';
+import '../../features/profile/presentation/pages/profile_page.dart';
+import 'onboard_service.dart';
+
+final GlobalKey<NavigatorState> rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
+final GlobalKey<NavigatorState> _shellHomeNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell_home');
+final GlobalKey<NavigatorState> _shellDiagnoseNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell_diagnose');
+final GlobalKey<NavigatorState> _shellMyGardenNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell_my_garden');
+final GlobalKey<NavigatorState> _shellProfileNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell_profile');
+
+final GoRouter router = GoRouter(
+  navigatorKey: rootNavigatorKey,
+
+  initialLocation: OnboardingPage.routePath,
+  redirect: (context, state) async {
+    final currentLocation = state.matchedLocation;
+
+    if (currentLocation == OnboardingPage.routePath) {
+      final onBoardService = OnBoardService();
+      final hasSeenOnboarding = await onBoardService.hasSeenOnBoarding();
+
+      if (hasSeenOnboarding) {
+        return HomePage.routePath;
+      }
+    }
+
+    final mainAppRoutes = [
+      HomePage.routePath,
+      DiagnosePage.routePath,
+      MyGardenPage.routePath,
+      ProfilePage.routePath,
+    ];
+
+    if (mainAppRoutes.any((route) => currentLocation.startsWith(route))) {
+      final onBoardService = OnBoardService();
+      final hasSeenOnboarding = await onBoardService.hasSeenOnBoarding();
+
+      if (!hasSeenOnboarding) {
+        return OnboardingPage.routePath;
+      }
+    }
+
+    return null;
+  },
+  routes: [
+    GoRoute(
+      path: OnboardingPage.routePath,
+      name: OnboardingPage.routeName,
+      pageBuilder: (context, state) => _pageBuilder(state: state, child: const OnboardingPage()),
+    ),
+    GoRoute(
+      path: PaywallPage.routePath,
+      name: PaywallPage.routeName,
+      pageBuilder: (context, state) => _pageBuilder(state: state, child: const PaywallPage()),
+    ),
+    StatefulShellRoute.indexedStack(
+      builder: (context, state, navigationShell) {
+        return BaseScreen(fullPath: state.uri.toString(), child: navigationShell);
+      },
+      branches: [
+        StatefulShellBranch(
+          navigatorKey: _shellHomeNavigatorKey,
+          routes: [
+            GoRoute(
+              path: HomePage.routePath,
+              name: HomePage.routeName,
+              pageBuilder: (context, state) => _pageBuilder(state: state, child: const HomePage()),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          navigatorKey: _shellDiagnoseNavigatorKey,
+          routes: [
+            GoRoute(
+              path: DiagnosePage.routePath,
+              name: DiagnosePage.routeName,
+              pageBuilder: (context, state) => _pageBuilder(state: state, child: const DiagnosePage()),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          navigatorKey: _shellMyGardenNavigatorKey,
+          routes: [
+            GoRoute(
+              path: MyGardenPage.routePath,
+              name: MyGardenPage.routeName,
+              pageBuilder: (context, state) => _pageBuilder(state: state, child: const MyGardenPage()),
+            ),
+          ],
+        ),
+        StatefulShellBranch(
+          navigatorKey: _shellProfileNavigatorKey,
+          routes: [
+            GoRoute(
+              path: ProfilePage.routePath,
+              name: ProfilePage.routeName,
+              pageBuilder: (context, state) => _pageBuilder(state: state, child: const ProfilePage()),
+            ),
+          ],
+        ),
+      ],
+    ),
+  ],
+);
+
+Page<dynamic> _pageBuilder({
+  required GoRouterState state,
+  required Widget child,
+}) {
+  return NoTransitionPage(
+    key: state.pageKey,
+    child: child,
+  );
+}
