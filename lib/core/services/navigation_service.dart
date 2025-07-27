@@ -20,36 +20,7 @@ final GoRouter router = GoRouter(
   navigatorKey: rootNavigatorKey,
 
   initialLocation: OnboardingPage.routePath,
-  redirect: (context, state) async {
-    final currentLocation = state.matchedLocation;
-
-    if (currentLocation == OnboardingPage.routePath) {
-      final onBoardService = OnBoardService();
-      final hasSeenOnboarding = await onBoardService.hasSeenOnBoarding();
-
-      if (hasSeenOnboarding) {
-        return HomePage.routePath;
-      }
-    }
-
-    final mainAppRoutes = [
-      HomePage.routePath,
-      DiagnosePage.routePath,
-      MyGardenPage.routePath,
-      ProfilePage.routePath,
-    ];
-
-    if (mainAppRoutes.any((route) => currentLocation.startsWith(route))) {
-      final onBoardService = OnBoardService();
-      final hasSeenOnboarding = await onBoardService.hasSeenOnBoarding();
-
-      if (!hasSeenOnboarding) {
-        return OnboardingPage.routePath;
-      }
-    }
-
-    return null;
-  },
+  redirect: (context, state) async {},
   routes: [
     GoRoute(
       path: OnboardingPage.routePath,
