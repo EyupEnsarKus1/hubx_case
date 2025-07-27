@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/data/onboard_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/data/onboard_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/onboard/onboard_image_one.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/onboard/onboard_image_one.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/pages/onboarding_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/pages/onboarding_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_care_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_care_title.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_photo_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_photo_title.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_title_with_brush.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_title_with_brush.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_welcome_title.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/widgets/onboard_welcome_title.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

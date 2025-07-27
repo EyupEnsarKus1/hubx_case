@@ -83,6 +83,7 @@ class OnboardTitleWithBrush extends StatelessWidget {
                         transform: Matrix4.identity()
                           ..translate(0.0, 0.0)
                           ..rotateZ(0.07),
+
                         width: brushWidth! + 4,
                         height: brushHeight! + 8,
                       ),

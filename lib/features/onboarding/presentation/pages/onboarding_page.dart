@@ -88,6 +88,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                               ),
                             ),
                           ],
+                          32.verticalSpace,
                           HubxImageWidget(
                             assetPath: model.image,
                           ),
