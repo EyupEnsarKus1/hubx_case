@@ -51,6 +51,7 @@ flutter:
     - assets/icons/svg_icons/
     - assets/images/background/
     - assets/images/onboard/
+    - assets/images/paywall/
   fonts:
     - family: Roboto
       fonts:

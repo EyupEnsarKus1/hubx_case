@@ -10,6 +10,7 @@ import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 import 'package:hubx_case/core/services/onboard_service.dart';
 import 'package:hubx_case/features/home/presentation/pages/home_page.dart';
 import 'package:hubx_case/features/onboarding/presentation/widgets/onboard_legacy_text.dart';
+import 'package:hubx_case/features/paywall/presentation/pages/paywall_page.dart';
 import '../../../../generated/assets.gen.dart';
 import '../../data/onboard_data.dart';
 
@@ -37,7 +38,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     final onBoardService = OnBoardService();
     await onBoardService.setHasSeenOnBoarding();
     if (mounted) {
-      context.go(HomePage.routePath);
+      context.go(PaywallPage.routePath);
     }
   }
 
@@ -61,6 +62,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
               children: [
                 Expanded(
                   child: PageView.builder(
+                    physics: const ClampingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    allowImplicitScrolling: false,
                     controller: _pageController,
                     itemCount: onboardItems.length,
                     onPageChanged: (index) {
@@ -109,8 +113,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   margin: HubxPadding.p20.horizontal + HubxPadding.p16.onlyBottom,
                   onPressed: () {
                     if (_currentPage == onboardItems.length - 1) {
+                      // Son ekranda - onboarding'i tamamla ve home sayfasına git
                       _completeOnboarding();
                     } else {
+                      // Sonraki sayfaya geç
                       _pageController.nextPage(
                         duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut,

@@ -29,6 +29,9 @@ class $AssetsImagesGen {
 
   /// Directory path: assets/images/onboard
   $AssetsImagesOnboardGen get onboard => const $AssetsImagesOnboardGen();
+
+  /// Directory path: assets/images/paywall
+  $AssetsImagesPaywallGen get paywall => const $AssetsImagesPaywallGen();
 }
 
 class $AssetsImagesBackgroundGen {
@@ -58,6 +61,16 @@ class $AssetsImagesOnboardGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [onboardImageOne, onboardImageThree, onboardImageTwo, onboardTitleBrush];
+}
+
+class $AssetsImagesPaywallGen {
+  const $AssetsImagesPaywallGen();
+
+  /// File path: assets/images/paywall/paywall_header_image.png
+  AssetGenImage get paywallHeaderImage => const AssetGenImage('assets/images/paywall/paywall_header_image.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [paywallHeaderImage];
 }
 
 class Assets {
