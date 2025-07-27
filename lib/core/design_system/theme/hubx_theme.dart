@@ -122,6 +122,7 @@ class AppTheme {
     ),
     iconTheme: const IconThemeData(color: HubxColors.primary),
     textTheme: _buildTextTheme(HubxColors.white),
+
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: HubxColors.primary,
