@@ -55,92 +55,89 @@ class _OnboardingPageState extends State<OnboardingPage> {
             ),
           ),
 
-          // İçerik
           SafeArea(
             bottom: false,
-            child: Positioned.fill(
-              child: Column(
-                children: [
-                  Expanded(
-                    flex: 4,
-                    child: PageView.builder(
-                      controller: _pageController,
-                      itemCount: onboardItems.length,
-                      onPageChanged: (index) {
-                        setState(() {
-                          _currentPage = index;
-                        });
-                      },
-                      itemBuilder: (context, index) {
-                        final model = onboardItems[index];
-                        return Padding(
-                          padding: HubxPadding.p20.horizontal,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              model.title,
-                              if (model.description != null) ...[
-                                8.verticalSpace,
-                                Text(
-                                  model.description!,
-                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                    color: HubxColors.onboardDescriptionTextColor,
-                                    height: 1.38,
-                                  ),
-                                  textAlign: TextAlign.start,
-                                ),
-                              ],
-                              HubxImageWidget(
-                                assetPath: model.image,
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                  HubxButton(
-                    margin: HubxPadding.p20.horizontal + HubxPadding.p16.onlyBottom,
-                    onPressed: () {
-                      if (_currentPage == onboardItems.length - 1) {
-                        _completeOnboarding();
-                      } else {
-                        _pageController.nextPage(
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeInOut,
-                        );
-                      }
+            child: Column(
+              children: [
+                Expanded(
+                  child: PageView.builder(
+                    controller: _pageController,
+                    itemCount: onboardItems.length,
+                    onPageChanged: (index) {
+                      setState(() {
+                        _currentPage = index;
+                      });
                     },
-                    title: onboardItems[_currentPage].buttonText,
-                  ),
-                  SizedBox(
-                    height: HubxSizes.size56,
-                    child: _currentPage == 0
-                        ? const OnboardLegacyText()
-                        : Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: List.generate(
-                              onboardItems.length,
-                              (index) => Container(
-                                margin: HubxPadding.p4.horizontal,
-                                width: HubxSizes.size8,
-                                height: HubxSizes.size8,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: index == _currentPage
-                                      ? HubxColors.mainText
-                                      : HubxColors.mainText.withValues(
-                                          alpha: .25,
-                                        ),
+                    itemBuilder: (context, index) {
+                      final model = onboardItems[index];
+                      return Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          model.title,
+                          if (model.description != null) ...[
+                            Padding(
+                              padding: HubxPadding.p20.horizontal,
+                              child: Text(
+                                model.description!,
+                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                  color: HubxColors.onboardDescriptionTextColor,
+                                  height: 1.38,
                                 ),
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                          ],
+                          HubxImageWidget(
+                            assetPath: model.image,
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+                HubxButton(
+                  margin: HubxPadding.p20.horizontal + HubxPadding.p16.onlyBottom,
+                  onPressed: () {
+                    if (_currentPage == onboardItems.length - 1) {
+                      _completeOnboarding();
+                    } else {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.easeInOut,
+                      );
+                    }
+                  },
+                  title: onboardItems[_currentPage].buttonText,
+                ),
+                SizedBox(
+                  height: HubxSizes.size30,
+                  child: _currentPage == 0
+                      ? const OnboardLegacyText()
+                      : Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: List.generate(
+                            onboardItems.length,
+                            (index) => Container(
+                              margin: HubxPadding.p4.horizontal,
+                              width: HubxSizes.size8,
+                              height: HubxSizes.size8,
+
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: index == _currentPage
+                                    ? HubxColors.mainText
+                                    : HubxColors.mainText.withValues(
+                                        alpha: .25,
+                                      ),
                               ),
                             ),
                           ),
-                  ),
-                ],
-              ),
+                        ),
+                ),
+                28.verticalSpace,
+              ],
             ),
           ),
         ],

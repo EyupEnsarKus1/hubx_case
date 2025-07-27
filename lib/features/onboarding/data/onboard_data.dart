@@ -23,7 +23,7 @@ List<OnBoardModel> buildOnboardData(BuildContext context) {
     ),
     OnBoardModel(
       title: const OnboardCareTitle(),
-      image: Assets.images.onboard.onboardImageOne.path,
+      image: Assets.images.onboard.onboardImageThree.path,
       buttonText: 'Continue',
       pageBg: Assets.images.background.onboardScreenOneBg.path,
     ),

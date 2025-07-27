@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 
 class OnboardWelcomeTitle extends StatelessWidget {
@@ -7,23 +8,26 @@ class OnboardWelcomeTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      textAlign: TextAlign.start,
-      text: TextSpan(
-        text: 'Welcome to ',
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-          fontSize: HubxSizes.size28,
-          fontWeight: HubxFontWeights.light,
-        ),
-        children: <TextSpan>[
-          TextSpan(
-            text: 'PlantApp',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              fontSize: HubxSizes.size28,
-              fontWeight: HubxFontWeights.semiBold,
-            ),
+    return Padding(
+      padding: HubxPadding.p20.horizontal,
+      child: RichText(
+        textAlign: TextAlign.start,
+        text: TextSpan(
+          text: 'Welcome to ',
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            fontSize: HubxSizes.size28,
+            fontWeight: HubxFontWeights.light,
           ),
-        ],
+          children: <TextSpan>[
+            TextSpan(
+              text: 'PlantApp',
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                fontSize: HubxSizes.size28,
+                fontWeight: HubxFontWeights.semiBold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

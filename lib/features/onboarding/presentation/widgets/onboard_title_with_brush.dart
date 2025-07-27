@@ -5,28 +5,36 @@ import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 import 'package:hubx_case/generated/assets.gen.dart';
 
+class TextPart {
+  final String text;
+  final bool isBold;
+
+  const TextPart({
+    required this.text,
+    this.isBold = false,
+  });
+}
+
 class OnboardTitleWithBrush extends StatelessWidget {
-  final String normalText;
-  final String brushText;
+  final List<TextPart> textParts;
   final double? width;
-  final double brushWidth;
-  final double brushHeight;
-  final double brushLeft;
-  final double brushTop;
-  final double brushContainerLeft;
-  final double brushContainerTop;
+  final double? brushWidth;
+  final double? brushHeight;
+  final double? brushLeft;
+  final double? brushTop;
+  final double? brushContainerLeft;
+  final double? brushContainerTop;
 
   const OnboardTitleWithBrush({
     super.key,
-    required this.normalText,
-    required this.brushText,
+    required this.textParts,
     this.width,
-    required this.brushWidth,
-    required this.brushHeight,
-    required this.brushLeft,
-    required this.brushTop,
-    required this.brushContainerLeft,
-    required this.brushContainerTop,
+    this.brushWidth,
+    this.brushHeight,
+    this.brushLeft,
+    this.brushTop,
+    this.brushContainerLeft,
+    this.brushContainerTop,
   });
 
   @override
@@ -43,67 +51,58 @@ class OnboardTitleWithBrush extends StatelessWidget {
             children: [
               Text.rich(
                 TextSpan(
-                  children: [
-                    TextSpan(
-                      text: normalText,
+                  children: textParts.map((part) {
+                    return TextSpan(
+                      text: part.text,
                       style: TextStyle(
                         color: HubxColors.mainText,
                         fontSize: HubxSizes.size28,
                         fontFamily: HubxFonts.primaryFont,
-                        fontWeight: HubxFontWeights.medium,
+                        fontWeight: part.isBold ? HubxFontWeights.extraBold : HubxFontWeights.medium,
                         letterSpacing: -1,
                       ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ],
+          ),
+          if (brushWidth != null && brushHeight != null && brushLeft != null && brushTop != null)
+            Positioned(
+              left: brushLeft!,
+              top: brushTop!,
+              child: Container(
+                width: brushWidth!,
+                height: brushHeight!,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: brushContainerLeft ?? 0,
+                      top: brushContainerTop ?? 0,
+                      child: Container(
+                        transform: Matrix4.identity()
+                          ..translate(0.0, 0.0)
+                          ..rotateZ(0.07),
+                        width: brushWidth! + 4,
+                        height: brushHeight! + 8,
+                      ),
                     ),
-                    TextSpan(
-                      text: brushText,
-                      style: TextStyle(
-                        color: HubxColors.mainText,
-                        fontSize: HubxSizes.size28,
-                        fontFamily: HubxFonts.primaryFont,
-                        fontWeight: HubxFontWeights.extraBold,
-                        letterSpacing: -1,
+                    Positioned(
+                      left: -3,
+                      top: 0,
+                      child: Container(
+                        width: brushWidth! - 2,
+                        height: brushHeight! - 1,
+                        child: HubxImageWidget(
+                          assetPath: Assets.images.onboard.onboardTitleBrush.path,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-            ],
-          ),
-          Positioned(
-            left: brushLeft,
-            top: brushTop,
-            child: Container(
-              width: brushWidth,
-              height: brushHeight,
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: brushContainerLeft,
-                    top: brushContainerTop,
-                    child: Container(
-                      transform: Matrix4.identity()
-                        ..translate(0.0, 0.0)
-                        ..rotateZ(0.07),
-                      width: brushWidth + 4,
-                      height: brushHeight + 8,
-                    ),
-                  ),
-                  Positioned(
-                    left: -3,
-                    top: 0,
-                    child: Container(
-                      width: brushWidth - 2,
-                      height: brushHeight - 1,
-                      child: HubxImageWidget(
-                        assetPath: Assets.images.onboard.onboardTitleBrush.path,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ),
-          ),
         ],
       ),
     );
