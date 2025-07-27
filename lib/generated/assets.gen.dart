@@ -83,12 +83,21 @@ class $AssetsImagesPaywallGen {
   /// File path: assets/images/paywall/paywall_header_image.png
   AssetGenImage get paywallHeaderImage => const AssetGenImage('assets/images/paywall/paywall_header_image.png');
 
+  /// File path: assets/images/paywall/paywall_image.png
+  AssetGenImage get paywallImage => const AssetGenImage('assets/images/paywall/paywall_image.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [paywallHeaderImage];
+  List<AssetGenImage> get values => [paywallHeaderImage, paywallImage];
 }
 
 class $AssetsIconsSvgIconsPaywallGen {
   const $AssetsIconsSvgIconsPaywallGen();
+
+  /// File path: assets/icons/svg_icons/paywall/close_icon.svg
+  String get closeIcon => 'assets/icons/svg_icons/paywall/close_icon.svg';
+
+  /// File path: assets/icons/svg_icons/paywall/detailed.svg
+  String get detailed => 'assets/icons/svg_icons/paywall/detailed.svg';
 
   /// File path: assets/icons/svg_icons/paywall/faster.svg
   String get faster => 'assets/icons/svg_icons/paywall/faster.svg';
@@ -97,7 +106,7 @@ class $AssetsIconsSvgIconsPaywallGen {
   String get unlimited => 'assets/icons/svg_icons/paywall/unlimited.svg';
 
   /// List of all assets
-  List<String> get values => [faster, unlimited];
+  List<String> get values => [closeIcon, detailed, faster, unlimited];
 }
 
 class Assets {

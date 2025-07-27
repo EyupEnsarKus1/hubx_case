@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/footer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_footer_description.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/home/diagnose_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/home/home_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/home/my_garden_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/home/profil_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/close_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/detailed.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/paywall/paywall_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/data/subscription_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/data/subscription_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/pages/paywall_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/pages/paywall_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/subscription_plan_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/subscription_plan_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/feature_cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/feature_cards.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/single_feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/single_feature_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/assets.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.gen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +76,11 @@
       <recent name="$PROJECT_DIR$/lib/features/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/icons/svg_icons/home" />
       <recent name="$PROJECT_DIR$/assets/icons/svg_icons/paywall" />
-      <recent name="$PROJECT_DIR$/assets/icons/svg_icons" />
       <recent name="$PROJECT_DIR$/assets/images/paywall" />
+      <recent name="$PROJECT_DIR$/assets/icons/svg_icons" />
       <recent name="$PROJECT_DIR$/assets/images/onboard" />
-      <recent name="$PROJECT_DIR$/assets/images/background" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

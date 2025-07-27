@@ -12,6 +12,7 @@ import '../../data/subscription_model.dart';
 import '../widgets/feature_cards.dart';
 import '../widgets/footer.dart';
 import '../widgets/paywall_footer_description.dart';
+import '../widgets/paywall_header.dart';
 import '../widgets/subscription_plan_card.dart';
 
 class PaywallPage extends StatefulWidget {
@@ -39,68 +40,26 @@ class _PaywallPageState extends State<PaywallPage> {
     return HubxScaffold(
       body: Container(
         color: HubxColors.paywallBackground,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.topCenter,
-                child: HubxImageWidget(
-                  fit: BoxFit.fitWidth,
-                  assetPath: Assets.images.paywall.paywallHeaderImage.path,
-                ),
-              ),
-              RichText(
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: "PlantApp",
-                      style: TextStyle(
-                        fontFamily: HubxFonts.primaryFont,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 24.sp,
-                        color: HubxColors.white,
-                      ),
-                    ),
-                    TextSpan(
-                      text: "Premium",
-                      style: TextStyle(
-                        fontFamily: HubxFonts.primaryFont,
-                        fontWeight: HubxFontWeights.light,
-                        fontSize: 27.sp,
-                        color: HubxColors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Text(
-                "Access All Features",
-                style: TextStyle(
-                  fontFamily: HubxFonts.primaryFont,
-                  fontWeight: HubxFontWeights.regular,
-                  fontSize: 17.sp,
-                  color: HubxColors.white70,
-                  letterSpacing: 0.38.sp,
-                ),
-              ),
-              const FeatureCards(),
-              ...subscriptions
-                  .map(
-                    (subscription) => SubscriptionPlanCard(
-                      subscription: subscription,
-                      onTap: () => _selectPlan(subscription.planId),
-                    ),
-                  )
-                  .toList(),
-              HubxButton(
-                title: "Try free for 3 days",
-                onPressed: () {},
-                margin: HubxPadding.p20.horizontal + HubxPadding.p8.onlyTop + HubxPadding.p10.onlyBottom,
-              ),
-              PaywallFooterDescription(),
-              Footer(),
-            ],
-          ),
+        child: Column(
+          children: [
+            const PaywallHeader(),
+            const FeatureCards(),
+            ...subscriptions
+                .map(
+                  (subscription) => SubscriptionPlanCard(
+                    subscription: subscription,
+                    onTap: () => _selectPlan(subscription.planId),
+                  ),
+                )
+                .toList(),
+            HubxButton(
+              title: "Try free for 3 days",
+              onPressed: () {},
+              margin: HubxPadding.p20.horizontal + HubxPadding.p8.onlyTop + HubxPadding.p10.onlyBottom,
+            ),
+            PaywallFooterDescription(),
+            Footer(),
+          ],
         ),
       ),
     );

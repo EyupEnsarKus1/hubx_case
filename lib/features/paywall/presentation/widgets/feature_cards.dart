@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/features/paywall/data/feature_model.dart';
 import 'package:hubx_case/features/paywall/presentation/widgets/single_feature_card.dart';
 
@@ -23,14 +24,18 @@ class FeatureCards extends StatelessWidget {
       FeatureModel(
         title: "Detailed",
         description: "Plant care",
-        iconPath: Assets.icons.svgIcons.paywall.faster,
+        iconPath: Assets.icons.svgIcons.paywall.detailed,
       ),
     ];
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: List.generate(
-        features.length,
-        (index) => SingleFeatureCard(feature: features[index]),
+    return SingleChildScrollView(
+      padding: HubxPadding.p12.horizontal + HubxPadding.p24.onlyBottom,
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(
+          features.length,
+          (index) => SingleFeatureCard(feature: features[index]),
+        ),
       ),
     );
   }

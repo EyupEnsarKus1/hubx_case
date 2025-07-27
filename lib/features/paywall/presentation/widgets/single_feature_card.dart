@@ -14,6 +14,8 @@ class SingleFeatureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 1.sw * 0.43,
+      margin: HubxPadding.p4.horizontal,
       padding: HubxPadding.p16.all,
       decoration: BoxDecoration(
         color: HubxColors.white.withValues(alpha: .08),
@@ -32,6 +34,8 @@ class SingleFeatureCard extends StatelessWidget {
             child: HubxSvgImage(
               assetPath: feature.iconPath,
               color: HubxColors.white,
+              width: 18.w,
+              height: 18.h,
             ),
           ),
           10.verticalSpace,
