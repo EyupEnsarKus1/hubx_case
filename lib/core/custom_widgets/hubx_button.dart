@@ -81,7 +81,7 @@ class HubxButton extends StatelessWidget {
                   fontWeight: HubxFontWeights.semiBold,
                 ),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? HubxSizes.size8),
+              borderRadius: BorderRadius.circular(borderRadius ?? HubxSizes.size12),
               side: borderSide ?? BorderSide.none,
             ),
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
