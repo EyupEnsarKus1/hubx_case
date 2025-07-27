@@ -24,4 +24,5 @@ class HubxColors {
   static const Color white = Color(0xFFFFFFFF);
 
   static const Color onboardLegacyTextColor = Color(0xFF597165);
+  static const Color onboardDescriptionTextColor = Color(0xB213231B);
 }

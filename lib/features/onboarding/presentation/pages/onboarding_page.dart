@@ -4,7 +4,9 @@ import 'package:go_router/go_router.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_button.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_images_widgets.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_scaffold.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_colors.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 import 'package:hubx_case/core/services/onboard_service.dart';
 import 'package:hubx_case/features/home/presentation/pages/home_page.dart';
 import '../../../../generated/assets.gen.dart';
@@ -45,7 +47,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
     return HubxScaffold(
       body: Stack(
         children: [
-          // Arka plan görseli
           Positioned.fill(
             child: HubxImageWidget(
               assetPath: onboardItems[_currentPage].pageBg,
@@ -54,78 +55,84 @@ class _OnboardingPageState extends State<OnboardingPage> {
           ),
 
           // İçerik
-          Positioned.fill(
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 5,
-                  child: PageView.builder(
-                    controller: _pageController,
-                    itemCount: onboardItems.length,
-                    onPageChanged: (index) {
-                      setState(() {
-                        _currentPage = index;
-                      });
-                    },
-                    itemBuilder: (context, index) {
-                      final model = onboardItems[index];
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 24),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            model.title,
-                            if (model.description != null) ...[
-                              8.verticalSpace,
-                              Text(
-                                model.description!,
-                                style: Theme.of(context).textTheme.bodyMedium,
-                                textAlign: TextAlign.center,
+          SafeArea(
+            child: Positioned.fill(
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 4,
+                    child: PageView.builder(
+                      controller: _pageController,
+                      itemCount: onboardItems.length,
+                      onPageChanged: (index) {
+                        setState(() {
+                          _currentPage = index;
+                        });
+                      },
+                      itemBuilder: (context, index) {
+                        final model = onboardItems[index];
+                        return Padding(
+                          padding: HubxPadding.p20.horizontal,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              model.title,
+                              if (model.description != null) ...[
+                                8.verticalSpace,
+                                Text(
+                                  model.description!,
+                                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                    color: HubxColors.onboardDescriptionTextColor,
+                                    height: 1.38,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
+                              ],
+                              HubxImageWidget(
+                                assetPath: model.image,
                               ),
                             ],
-
-                            HubxImageWidget(
-                              assetPath: model.image,
-                            ),
-                            const SizedBox(height: 24),
-
-                            const SizedBox(height: 16),
-                          ],
-                        ),
-                      );
-                    },
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-                HubxButton(
-                  margin: HubxPadding.p20.horizontal + HubxPadding.p16.onlyBottom,
-                  onPressed: () {
-                    if (_currentPage == onboardItems.length - 1) {
-                      _completeOnboarding();
-                    } else {
-                      _pageController.nextPage(
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.easeInOut,
-                      );
-                    }
-                  },
-                  title: onboardItems[_currentPage].buttonText,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                    onboardItems.length,
-                    (index) => Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 4),
-                      width: 8,
-                      height: 8,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: index == _currentPage ? Colors.green : Colors.grey,
+                  HubxButton(
+                    margin: HubxPadding.p20.horizontal + HubxPadding.p16.onlyBottom,
+                    onPressed: () {
+                      if (_currentPage == onboardItems.length - 1) {
+                        _completeOnboarding();
+                      } else {
+                        _pageController.nextPage(
+                          duration: const Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                        );
+                      }
+                    },
+                    title: onboardItems[_currentPage].buttonText,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: List.generate(
+                      onboardItems.length,
+                      (index) => Container(
+                        margin: HubxPadding.p4.horizontal,
+                        width: HubxSizes.size8,
+                        height: HubxSizes.size8,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: index == _currentPage
+                              ? HubxColors.mainText
+                              : HubxColors.mainText.withValues(
+                                  alpha: .25,
+                                ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],

@@ -66,7 +66,7 @@ class HubxButton extends StatelessWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             padding: padding ?? HubxPadding.p16.horizontal,
-            minimumSize: Size(width ?? (expandWidth ? double.infinity : 0), height ?? HubxSizes.size48),
+            minimumSize: Size(width ?? (expandWidth ? double.infinity : 0), height ?? HubxSizes.size56),
             maximumSize: width != null ? Size(width!, double.infinity) : null,
             backgroundColor: gradient != null ? Colors.transparent : (backgroundColor ?? HubxColors.primary),
             foregroundColor: foreGroundColor ?? HubxColors.white,
