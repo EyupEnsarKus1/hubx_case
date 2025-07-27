@@ -69,28 +69,36 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       });
                     },
                     itemBuilder: (context, index) {
+                      final List<double> _titleTopOffsets = [-70, 60.0, -60.0];
+                      final topOffset = _titleTopOffsets[index].h;
                       final model = onboardItems[index];
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      return Stack(
+                        alignment: Alignment.center,
                         children: [
-                          model.title,
-                          if (model.description != null) ...[
-                            Padding(
-                              padding: HubxPadding.p20.horizontal,
-                              child: Text(
-                                model.description!,
-                                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                                  color: HubxColors.onboardDescriptionTextColor,
-                                  height: 1.38,
-                                ),
-                                textAlign: TextAlign.start,
-                              ),
+                          Positioned(
+                            top: topOffset,
+                            child: HubxImageWidget(
+                              assetPath: model.image,
+                              width: 1.sw,
                             ),
-                          ],
-                          32.verticalSpace,
-                          HubxImageWidget(
-                            assetPath: model.image,
+                          ),
+                          Column(
+                            children: [
+                              Align(alignment: Alignment.topLeft, child: model.title),
+                              if (model.description != null) ...[
+                                Padding(
+                                  padding: HubxPadding.p20.horizontal,
+                                  child: Text(
+                                    model.description!,
+                                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      color: HubxColors.onboardDescriptionTextColor,
+                                      height: 1.38,
+                                    ),
+                                    textAlign: TextAlign.start,
+                                  ),
+                                ),
+                              ],
+                            ],
                           ),
                         ],
                       );
