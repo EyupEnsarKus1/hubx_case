@@ -4,9 +4,9 @@ import 'package:hubx_case/features/home/domain/entities/image_entity.dart';
 class Category extends Equatable {
   final int id;
   final String name;
-  final String createdAt;
-  final String updatedAt;
-  final String publishedAt;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final DateTime publishedAt;
   final String title;
   final int rank;
   final ImageEntity image;

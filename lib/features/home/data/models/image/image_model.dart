@@ -1,8 +1,9 @@
+import 'package:hubx_case/features/home/domain/entities/image_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'image_model.g.dart';
 
 @JsonSerializable(explicitToJson: false)
-class ImageModel {
+class ImageModel extends ImageEntity {
   @JsonKey(name: "id")
   final int id;
   @JsonKey(name: "name")
@@ -56,7 +57,25 @@ class ImageModel {
     required this.providerMetadata,
     required this.createdAt,
     required this.updatedAt,
-  });
+  }) : super(
+    id: id,
+    name: name,
+    alternativeText: alternativeText,
+    caption: caption,
+    width: width,
+    height: height,
+    formats: formats,
+    hash: hash,
+    ext: ext,
+    mime: mime,
+    size: size,
+    url: url,
+    previewUrl: previewUrl,
+    provider: provider,
+    providerMetadata: providerMetadata,
+    createdAt: createdAt,
+    updatedAt: updatedAt,
+  );
 
   ImageModel copyWith({
     int? id,

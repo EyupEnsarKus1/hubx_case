@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/network/utils/api_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/utils/api_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/network/utils/generic_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/utils/generic_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/data_source/home_remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/data_source/home_remote_data_source.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/category_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/models/category_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/category_model.freezed.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/category_model.g.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/image_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/models/image_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/image_model.freezed.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/image_model.g.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/question_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/models/question_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/question_model.freezed.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/question_model.g.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_categories_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_categories_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_questions_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_questions_use_case.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/category_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/category_entity.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/image_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/image_entity.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

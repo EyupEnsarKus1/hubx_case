@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:dio/dio.dart';
-import 'package:hubx_case/features/home/data/models/question_model.dart';
+import 'package:hubx_case/features/home/data/models/question/question_model.dart';
 
 void main() {
   group('Questions API Test', () {

@@ -1,9 +1,10 @@
-import 'package:hubx_case/features/home/data/models/image_model.dart';
+import 'package:hubx_case/features/home/data/models/image/image_model.dart';
+import 'package:hubx_case/features/home/domain/entities/category_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'category_model.g.dart';
 
 @JsonSerializable(explicitToJson: false)
-class CategoryModel {
+class CategoryModel extends Category {
   @JsonKey(name: "id")
   final int id;
   @JsonKey(name: "name")
@@ -30,7 +31,16 @@ class CategoryModel {
     required this.title,
     required this.rank,
     required this.image,
-  });
+  }) : super(
+         id: id,
+         name: name,
+         createdAt: createdAt,
+         updatedAt: updatedAt,
+         publishedAt: publishedAt,
+         title: title,
+         rank: rank,
+         image: image,
+       );
 
   CategoryModel copyWith({
     int? id,

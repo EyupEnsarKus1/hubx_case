@@ -1,9 +1,10 @@
+import 'package:hubx_case/features/home/domain/entities/question_entity.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'question_model.g.dart';
 
 @JsonSerializable(explicitToJson: false)
-class QuestionModel {
+class QuestionModel extends Question {
   @JsonKey(name: "id")
   final int id;
   @JsonKey(name: "title")
@@ -24,7 +25,14 @@ class QuestionModel {
     required this.imageUri,
     required this.uri,
     required this.order,
-  });
+  }) : super(
+    id: id,
+    title: title,
+    subtitle: subtitle,
+    imageUri: imageUri,
+    uri: uri,
+    order: order,
+  );
 
   QuestionModel copyWith({
     int? id,
