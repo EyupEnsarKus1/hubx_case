@@ -65,8 +65,11 @@ class $AssetsIconsHomeGen {
   /// File path: assets/icons/home/scan_icon.svg
   String get scanIcon => 'assets/icons/home/scan_icon.svg';
 
+  /// File path: assets/icons/home/search_icon.svg
+  String get searchIcon => 'assets/icons/home/search_icon.svg';
+
   /// List of all assets
-  List<dynamic> get values => [diagnoseIcon, homeIcon, myGardenIcon, premiumBadge, profileIcon, scanIcon];
+  List<dynamic> get values => [diagnoseIcon, homeIcon, myGardenIcon, premiumBadge, profileIcon, scanIcon, searchIcon];
 }
 
 class $AssetsIconsPaywallGen {

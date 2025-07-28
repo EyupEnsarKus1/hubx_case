@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icons/home/premium_badge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/background/home_header.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/home_header.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/premium_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/home/search_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/core/custom_widgets/hubx_text_field.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/home/diagnose_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/home/diagnose_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/home/home_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/home/home_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/home/my_garden_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/home/my_garden_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/home/profile_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/home/profile_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/home/scan_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/home/scan_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/close_icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/paywall/close_icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/detailed.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/paywall/detailed.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/faster.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/paywall/faster.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/icons/svg_icons/paywall/unlimited.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons/paywall/unlimited.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/services/navigation_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/services/navigation_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/question_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/question_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/questions_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/questions_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/feature_cards.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/feature_cards.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_header.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/home_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/home_header.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/generated/assets.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.gen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +68,11 @@
       <recent name="$PROJECT_DIR$/lib/features/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/icons/home" />
       <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/assets/icons/icon/home" />
       <recent name="$PROJECT_DIR$/assets/icons/svg_icons/home" />
       <recent name="$PROJECT_DIR$/assets/images/background" />
-      <recent name="$PROJECT_DIR$/lib/features/home/data/models/question" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">

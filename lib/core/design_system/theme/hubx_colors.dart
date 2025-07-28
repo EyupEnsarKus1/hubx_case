@@ -29,6 +29,7 @@ class HubxColors {
   static const categoryCardColor = Color(0xFFF4F6F6);
   static const categoryCardBorderColor = Color(0x2D28BB89);
   static const premiumCardBg = Color(0xFF24201A);
+  static const textFieldBorderColor = Color(0x3C3C4340);
 
   static const Color onboardLegacyTextColor = Color(0xB2597165);
   static const Color onboardDescriptionTextColor = Color(0xB213231B);
