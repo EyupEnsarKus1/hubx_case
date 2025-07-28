@@ -5,26 +5,37 @@
 ### 🚀 Onboarding Akışı
 Uygulamanın kullanıcı karşılama ve tanıtım akışını gösteren ekranlar:
 
-![Onboarding Ekran 1](assets/screenshots/onboard_one.png)
-*İlk karşılama ekranı - Uygulamanın ana değer önerisi*
+<div align="center">
+  <img src="assets/screenshots/onboard_one.png" alt="Onboarding Ekran 1" width="250"/>
+  <p>İlk karşılama ekranı - Uygulamanın ana değer önerisi</p>
 
-![Onboarding Ekran 2](assets/screenshots/onboard_two.png)
-*İkinci tanıtım ekranı - Bitki bakım özelliklerinin açıklanması*
+  <img src="assets/screenshots/onboard_two.png" alt="Onboarding Ekran 2" width="250"/>
+  <p>İkinci tanıtım ekranı - Bitki bakım özelliklerinin açıklanması</p>
 
-![Onboarding Ekran 3](assets/screenshots/onboard_three.png)
-*Üçüncü tanıtım ekranı - Foto çekme ve tanıma özelliği*
+  <img src="assets/screenshots/onboard_three.png" alt="Onboarding Ekran 3" width="250"/>
+  <p>Üçüncü tanıtım ekranı - Foto çekme ve tanıma özelliği</p>
+</div>
+
+---
 
 ### 🏠 Ana Sayfa
 Uygulamanın merkezi hub'ı olan ana sayfa:
 
-![Ana Sayfa](assets/screenshots/home_page.png)
-*Ana sayfa - Kategoriler, sorular ve premium özellikler*
+<div align="center">
+  <img src="assets/screenshots/home_page.png" alt="Ana Sayfa" width="250"/>
+  <p>Ana sayfa - Kategoriler, sorular ve premium özellikler</p>
+</div>
+
+---
 
 ### 💎 Premium Paywall
 Premium özelliklere erişim için tasarlanmış paywall ekranı:
 
-![Paywall Sayfası](assets/screenshots/paywall_page.png)
-*Premium özellikler ve abonelik planları*
+<div align="center">
+  <img src="assets/screenshots/paywall_page.png" alt="Paywall Sayfası" width="250"/>
+  <p>Premium özellikler ve abonelik planları</p>
+</div>
+
 
 ---
 
