@@ -21,8 +21,10 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_bloc: ^9.1.1
   bloc: ^9.0.0
-  json_serializable: ^6.10.0
-  freezed: ^3.2.0
+  json_serializable: ^6.9.5
+  logger: ^2.6.1
+  dio: ^5.8.0+1
+  freezed: ^3.1.0
   intl: ^0.20.2
   shared_preferences: ^2.5.3
   shimmer: ^3.0.0

@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/design_system/theme/hubx_theme.dart';
 import 'core/design_system/theme/hubx_device.dart';
+import 'core/network/dependy_injection/injection.dart';
 import 'core/services/navigation_service.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
+  configureDependencies();
+  await getIt.allReady();
   runApp(const MyApp());
 }
 
