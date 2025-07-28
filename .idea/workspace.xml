@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/icons/home/search_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/custom_widgets/hubx_text_field.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/custom_widgets/hubx_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/custom_widgets/hubx_text_field.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/home_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/home_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/generated/assets.gen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/generated/assets.gen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

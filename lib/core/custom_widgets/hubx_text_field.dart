@@ -158,7 +158,7 @@ class _HubxTextFieldState extends State<HubxTextField> {
           counterText: "",
           enabled: widget.enabled,
           filled: true,
-          fillColor: HubxColors.grey100,
+          fillColor: widget.fillColor ?? HubxColors.white.withValues(alpha: .88),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.showObscureTextIcon
               ? GestureDetector(

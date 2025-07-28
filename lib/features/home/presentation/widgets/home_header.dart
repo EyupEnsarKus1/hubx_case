@@ -36,7 +36,7 @@ class HomeHeader extends StatelessWidget {
                   color: HubxColors.mainText,
                 ),
               ),
-              16.verticalSpace,
+              12.verticalSpace,
               HubxTextField(
                 contentPadding: HubxPadding.p12.custom(
                   left: HubxSizes.size16,
@@ -45,7 +45,6 @@ class HomeHeader extends StatelessWidget {
                 controller: TextEditingController(),
                 filled: true,
                 showBorder: true,
-
                 hintText: "Search for plants",
                 fillColor: HubxColors.white.withValues(alpha: .88),
                 borderRadius: 12.r,
