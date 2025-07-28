@@ -1,5 +1,7 @@
 # 🌱 HubX Case - Flutter Proje Dokümantasyonu
 
+## APK Dosyası
+[Google Drive üzerinden indir](https://drive.google.com/file/d/1WkYFT15SPNHuJZLMnISlxLWOOJZSfsc8/view?usp=sharing)
 ## 📱 Uygulama Ekran Görüntüleri
 
 ### 🚀 Onboarding Akışı
