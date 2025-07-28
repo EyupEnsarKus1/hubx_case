@@ -21,20 +21,21 @@ final GoRouter router = GoRouter(
   navigatorKey: rootNavigatorKey,
 
   initialLocation: OnboardingPage.routePath,
-  redirect: (context, state) async {},
+  redirect: (context, state) async {
+    final onBoardService = OnBoardService();
+    final hasSeenOnBoarding = await onBoardService.hasSeenOnBoarding();
+
+    if (hasSeenOnBoarding && state.uri.path == OnboardingPage.routePath) {
+      return HomePage.routePath;
+    }
+
+    return null; // Redirect yok
+  },
   routes: [
     GoRoute(
       path: OnboardingPage.routePath,
       name: OnboardingPage.routeName,
       pageBuilder: (context, state) => _pageBuilder(state: state, child: const OnboardingPage()),
-    ),
-    GoRoute(
-      path: PaywallPage.routePath,
-      name: PaywallPage.routeName,
-      pageBuilder: (context, state) => _pageBuilder(
-        state: state,
-        child: const PaywallPage(),
-      ),
     ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
@@ -54,6 +55,15 @@ final GoRouter router = GoRouter(
                   path: SearchPage.routePath,
                   name: SearchPage.routeName,
                   pageBuilder: (context, state) => _pageBuilder(state: state, child: const SearchPage()),
+                ),
+                GoRoute(
+                  parentNavigatorKey: rootNavigatorKey,
+                  path: 'paywall',
+                  name: PaywallPage.routeName,
+                  pageBuilder: (context, state) => _pageBuilder(
+                    state: state,
+                    child: const PaywallPage(),
+                  ),
                 ),
               ],
             ),

@@ -18,8 +18,8 @@ import '../widgets/paywall_header.dart';
 import '../widgets/subscription_plan_card.dart';
 
 class PaywallPage extends StatefulWidget {
-  static const String routeName = '/paywall';
-  static const String routePath = '/paywall';
+  static const String routeName = '/home/paywall';
+  static const String routePath = '/home/paywall';
   const PaywallPage({super.key});
 
   @override

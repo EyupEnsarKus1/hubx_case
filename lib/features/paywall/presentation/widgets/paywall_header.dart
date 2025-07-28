@@ -93,16 +93,25 @@ class _PaywallHeaderState extends State<PaywallHeader> {
           Positioned(
             right: 20.w,
             top: MediaQuery.of(context).padding.top,
-            child: GestureDetector(
-              onTap: widget.onClose,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: HubxColors.black.withValues(alpha: .4),
-                  shape: BoxShape.circle,
-                ),
-                child: HubxSvgImage(
-                  assetPath: Assets.icons.paywall.closeIcon,
-                  color: HubxColors.white,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                onTap: widget.onClose,
+
+                borderRadius: BorderRadius.circular(22.r),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: HubxColors.black.withValues(alpha: .4),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Center(
+                    child: HubxSvgImage(
+                      assetPath: Assets.icons.paywall.closeIcon,
+                      color: HubxColors.white,
+                      width: 24.w,
+                      height: 24.h,
+                    ),
+                  ),
                 ),
               ),
             ),
