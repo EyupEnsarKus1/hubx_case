@@ -42,13 +42,13 @@ class SubscriptionPlanCard extends StatelessWidget {
         child: Stack(
           children: [
             if (subscription.discountText != null)
-              Align(
-                alignment: Alignment.topRight,
+              Positioned(
+                top: 0,
+                right: 0,
                 child: Container(
                   padding: HubxPadding.p4.vertical + HubxPadding.p10.horizontal,
                   decoration: BoxDecoration(
                     color: HubxColors.primary,
-
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20.r),
                       topRight: Radius.circular(14.r),
