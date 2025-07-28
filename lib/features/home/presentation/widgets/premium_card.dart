@@ -42,21 +42,51 @@ class PremiumCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "FREE Premium Available",
-                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: HubxColors.white,
-                      fontWeight: FontWeight.w600,
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'FREE',
+                          style: TextStyle(
+                            color: const Color(0xFFE5C990),
+                            fontSize: 16,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w700,
+                            height: 1.31,
+                            shadows: [Shadow(offset: Offset(0, 2), blurRadius: 4, color: Color(0xFF000000).withOpacity(0.32))],
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' Premium Available',
+                          style: TextStyle(
+                            color: const Color(0xFFE5C990),
+                            fontSize: 16,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w600,
+                            height: 1.31,
+                            shadows: [Shadow(offset: Offset(0, 2), blurRadius: 4, color: Color(0xFF000000).withOpacity(0.32))],
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  Text("Tap to upgrade your account!"),
+                  Text(
+                    'Tap to upgrade your account!',
+                    style: TextStyle(
+                      color: const Color(0xCCFFDE9C),
+                      fontSize: 13,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w400,
+                      height: 1.23,
+                    ),
+                  ),
                 ],
               ),
             ),
             Icon(
               Icons.arrow_forward_ios_rounded,
               size: HubxSizes.size16,
-              color: HubxColors.white70,
+              color: HubxColors.goldIcon,
             ),
           ],
         ),

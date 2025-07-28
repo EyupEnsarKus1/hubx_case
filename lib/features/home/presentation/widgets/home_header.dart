@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_colors.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
+import 'package:hubx_case/features/home/presentation/pages/search_page.dart';
 
 import '../../../../core/custom_widgets/hubx_images_widgets.dart';
 import '../../../../core/custom_widgets/hubx_text_field.dart';
@@ -41,6 +43,10 @@ class HomeHeader extends StatelessWidget {
                 contentPadding: HubxPadding.p12.onlyTop,
                 controller: TextEditingController(),
                 filled: true,
+                onTap: () {
+                  context.pushNamed(SearchPage.routeName);
+                },
+                enabled: true,
                 showBorder: true,
                 hintText: "Search for plants",
                 fillColor: HubxColors.white.withValues(alpha: .88),

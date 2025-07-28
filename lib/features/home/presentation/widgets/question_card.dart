@@ -22,7 +22,7 @@ class QuestionCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 1.sw * 0.65,
+        width: 1.sw * 0.7,
         height: 1.sw * 0.45,
         margin: HubxPadding.p4.horizontal,
 

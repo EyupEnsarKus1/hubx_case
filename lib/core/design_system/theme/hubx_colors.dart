@@ -12,8 +12,7 @@ class HubxColors {
   static const Color subtitleText = Color(0xFF597165);
 
   static const Color paywallBackground = Color(0xFF101E17);
-  static const Color goldText = Color(0xFFE9C78C);
-  static const Color goldIcon = Color(0xFFF2D191);
+  static const Color goldIcon = Color(0xFFD0B070);
 
   static const Color grey100 = Color(0xFFF5F5F5);
   static const Color grey200 = Color(0xFFE0E0E0);

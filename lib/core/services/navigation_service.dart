@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hubx_case/features/home/presentation/pages/search_page.dart';
 
 import '../../features/base_screen/base_screen.dart';
 import '../../features/diagnose/presentation/pages/diagnose_page.dart';
@@ -44,6 +45,14 @@ final GoRouter router = GoRouter(
               path: HomePage.routePath,
               name: HomePage.routeName,
               pageBuilder: (context, state) => _pageBuilder(state: state, child: const HomePage()),
+              routes: [
+                GoRoute(
+                  parentNavigatorKey: rootNavigatorKey,
+                  path: SearchPage.routePath,
+                  name: SearchPage.routeName,
+                  pageBuilder: (context, state) => _pageBuilder(state: state, child: const SearchPage()),
+                ),
+              ],
             ),
           ],
         ),
