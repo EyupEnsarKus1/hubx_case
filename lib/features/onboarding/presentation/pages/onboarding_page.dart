@@ -73,7 +73,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                       });
                     },
                     itemBuilder: (context, index) {
-                      final List<double> _titleTopOffsets = [-70, 60.0, -60.0];
+                      final List<double> _titleTopOffsets = [-70, 60.0, -35.0];
                       final topOffset = _titleTopOffsets[index].h;
                       final model = onboardItems[index];
                       return Stack(
