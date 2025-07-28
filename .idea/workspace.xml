@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/core/network/custom_logger/custom_logger.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/network/utils/api_routes.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/core/network/utils/generic_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/home/data/data_source/home_remote_data_source.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/home/data/models/category_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/category_entity.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +49,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "home__design",
+    "git-widget-placeholder": "network__structre",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/eyupensarkus/Documents/GitHub/hubx_case/lib/features/profile",
@@ -69,11 +65,11 @@
       <recent name="$PROJECT_DIR$/lib/features/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/features/home/presentation" />
       <recent name="$PROJECT_DIR$/lib/core/network/response_handler" />
       <recent name="$PROJECT_DIR$/assets/icons/svg_icons/home" />
       <recent name="$PROJECT_DIR$/assets/icons/svg_icons/paywall" />
       <recent name="$PROJECT_DIR$/assets/images/paywall" />
-      <recent name="$PROJECT_DIR$/assets/icons/svg_icons" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
