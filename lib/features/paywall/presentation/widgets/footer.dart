@@ -9,27 +9,33 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _FooterLink(text: "Terms"),
-        Text(
-          " • ",
-          style: TextStyle(
-            color: HubxColors.white.withValues(alpha: 0.5),
-            fontSize: 12.sp,
-          ),
+    return ColoredBox(
+      color: HubxColors.paywallBackground,
+      child: SafeArea(
+        top: false,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _FooterLink(text: "Terms"),
+            Text(
+              " • ",
+              style: TextStyle(
+                color: HubxColors.white.withValues(alpha: 0.5),
+                fontSize: 12.sp,
+              ),
+            ),
+            _FooterLink(text: "Privacy"),
+            Text(
+              " • ",
+              style: TextStyle(
+                color: HubxColors.white.withValues(alpha: 0.5),
+                fontSize: 12.sp,
+              ),
+            ),
+            _FooterLink(text: "Restore"),
+          ],
         ),
-        _FooterLink(text: "Privacy"),
-        Text(
-          " • ",
-          style: TextStyle(
-            color: HubxColors.white.withValues(alpha: 0.5),
-            fontSize: 12.sp,
-          ),
-        ),
-        _FooterLink(text: "Restore"),
-      ],
+      ),
     );
   }
 }

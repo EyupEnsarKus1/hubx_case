@@ -34,7 +34,6 @@ final GoRouter router = GoRouter(
       pageBuilder: (context, state) => _pageBuilder(
         state: state,
         child: const PaywallPage(),
-        fullscreenDialog: true,
       ),
     ),
     StatefulShellRoute.indexedStack(

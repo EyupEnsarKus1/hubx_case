@@ -37,20 +37,20 @@ class _PaywallHeaderState extends State<PaywallHeader> {
       children: [
         HubxImageWidget(
           fit: BoxFit.fitWidth,
-          assetPath: Assets.images.paywall.paywallImage.path,
+          assetPath: Assets.images.paywall.paywallHeaderImage.path,
         ),
         Positioned(
-          bottom: 48.h,
-          child: Padding(
-            padding: HubxPadding.p16.horizontal,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
+          bottom: -24.h,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: HubxPadding.p16.horizontal,
+                child: RichText(
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "PlantApp",
+                        text: "PlantApp ",
                         style: TextStyle(
                           fontFamily: HubxFonts.primaryFont,
                           fontWeight: FontWeight.w900,
@@ -70,7 +70,10 @@ class _PaywallHeaderState extends State<PaywallHeader> {
                     ],
                   ),
                 ),
-                Text(
+              ),
+              Padding(
+                padding: HubxPadding.p16.horizontal,
+                child: Text(
                   "Access All Features",
                   style: TextStyle(
                     fontFamily: HubxFonts.primaryFont,
@@ -80,8 +83,10 @@ class _PaywallHeaderState extends State<PaywallHeader> {
                     letterSpacing: 0.38.sp,
                   ),
                 ),
-              ],
-            ),
+              ),
+              24.verticalSpace,
+              const FeatureCards(),
+            ],
           ),
         ),
         if (_showCloseIcon)
