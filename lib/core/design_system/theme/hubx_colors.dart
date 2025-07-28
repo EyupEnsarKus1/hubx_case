@@ -7,6 +7,7 @@ class HubxColors {
 
   static const Color hintText = Color(0xFFAFAFAF);
   static const Color bottomNavInactive = Color(0xFFBDBDBD);
+  static const Color bottomNavInactiveTextColor = Color(0xFF979798);
   static const Color whiteTextOpacity50 = Color(0x80FFFFFF);
   static const Color subtitleText = Color(0xFF597165);
 

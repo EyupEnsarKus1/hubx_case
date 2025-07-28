@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_button.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_images_widgets.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_scaffold.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_colors.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
+import 'package:hubx_case/features/home/presentation/pages/home_page.dart';
 
 import '../../../../generated/assets.gen.dart';
 import '../../data/subscription_model.dart';
@@ -54,7 +56,9 @@ class _PaywallPageState extends State<PaywallPage> {
                 .toList(),
             HubxButton(
               title: "Try free for 3 days",
-              onPressed: () {},
+              onPressed: () {
+                context.go(HomePage.routePath);
+              },
               margin: HubxPadding.p20.horizontal + HubxPadding.p8.onlyTop + HubxPadding.p10.onlyBottom,
             ),
             PaywallFooterDescription(),

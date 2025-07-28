@@ -44,6 +44,9 @@ class $AssetsImagesGen {
 class $AssetsIconsSvgIconsGen {
   const $AssetsIconsSvgIconsGen();
 
+  /// Directory path: assets/icons/svg_icons/home
+  $AssetsIconsSvgIconsHomeGen get home => const $AssetsIconsSvgIconsHomeGen();
+
   /// Directory path: assets/icons/svg_icons/paywall
   $AssetsIconsSvgIconsPaywallGen get paywall => const $AssetsIconsSvgIconsPaywallGen();
 }
@@ -88,6 +91,28 @@ class $AssetsImagesPaywallGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [paywallHeaderImage, paywallImage];
+}
+
+class $AssetsIconsSvgIconsHomeGen {
+  const $AssetsIconsSvgIconsHomeGen();
+
+  /// File path: assets/icons/svg_icons/home/diagnose_icon.svg
+  String get diagnoseIcon => 'assets/icons/svg_icons/home/diagnose_icon.svg';
+
+  /// File path: assets/icons/svg_icons/home/home_icon.svg
+  String get homeIcon => 'assets/icons/svg_icons/home/home_icon.svg';
+
+  /// File path: assets/icons/svg_icons/home/my_garden_icon.svg
+  String get myGardenIcon => 'assets/icons/svg_icons/home/my_garden_icon.svg';
+
+  /// File path: assets/icons/svg_icons/home/profile_icon.svg
+  String get profileIcon => 'assets/icons/svg_icons/home/profile_icon.svg';
+
+  /// File path: assets/icons/svg_icons/home/scan_icon.svg
+  String get scanIcon => 'assets/icons/svg_icons/home/scan_icon.svg';
+
+  /// List of all assets
+  List<String> get values => [diagnoseIcon, homeIcon, myGardenIcon, profileIcon, scanIcon];
 }
 
 class $AssetsIconsSvgIconsPaywallGen {

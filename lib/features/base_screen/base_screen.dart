@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hubx_case/core/custom_widgets/hubx_images_widgets.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_scaffold.dart';
 
 import '../../core/design_system/theme/hubx_colors.dart';
 import '../../core/design_system/theme/hubx_padding.dart';
 import '../../core/design_system/theme/hubx_sizes.dart';
 import '../../core/design_system/theme/hubx_fonts.dart';
+import '../../generated/assets.gen.dart';
 
 class BaseScreen extends StatelessWidget {
   const BaseScreen({super.key, required this.child, required this.fullPath});
@@ -37,7 +39,7 @@ class BaseScreen extends StatelessWidget {
             Expanded(
               child: NavItem(
                 index: 0,
-                icon: Icons.home,
+                icon: Assets.icons.svgIcons.home.homeIcon,
                 label: 'Home',
                 isSelected: child.currentIndex == 0,
                 onTap: () {
@@ -48,7 +50,7 @@ class BaseScreen extends StatelessWidget {
             Expanded(
               child: NavItem(
                 index: 1,
-                icon: Icons.shield,
+                icon: Assets.icons.svgIcons.home.diagnoseIcon,
                 label: 'Diagnose',
                 isSelected: child.currentIndex == 1,
                 onTap: () {
@@ -57,12 +59,9 @@ class BaseScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: CenterButton(),
-            ),
-            Expanded(
               child: NavItem(
                 index: 2,
-                icon: Icons.eco,
+                icon: Assets.icons.svgIcons.home.myGardenIcon,
                 label: 'My Garden',
                 isSelected: child.currentIndex == 2,
                 onTap: () {
@@ -73,7 +72,7 @@ class BaseScreen extends StatelessWidget {
             Expanded(
               child: NavItem(
                 index: 3,
-                icon: Icons.person,
+                icon: Assets.icons.svgIcons.home.profileIcon,
                 label: 'Profile',
                 isSelected: child.currentIndex == 3,
                 onTap: () {
@@ -99,7 +98,7 @@ class NavItem extends StatelessWidget {
   });
 
   final int index;
-  final IconData icon;
+  final String icon;
   final String label;
   final bool isSelected;
   final VoidCallback onTap;
@@ -117,20 +116,15 @@ class NavItem extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
-              color: isSelected ? HubxColors.primary : HubxColors.bottomNavInactive,
-              size: HubxSizes.size24,
-            ),
+            HubxSvgImage(assetPath: icon, width: 24.w, height: 24.h, color: isSelected ? HubxColors.primary : HubxColors.bottomNavInactive),
             HubxSizes.size4.verticalSpace,
             Text(
               label,
               style: TextStyle(
-                color: isSelected ? HubxColors.primary : HubxColors.bottomNavInactive,
-                fontSize: HubxSizes.size14,
-                fontWeight: HubxFontWeights.medium,
+                color: isSelected ? HubxColors.primary : HubxColors.bottomNavInactiveTextColor,
+                fontSize: HubxSizes.size12,
+                fontWeight: HubxFontWeights.regular,
                 fontFamily: HubxFonts.primaryFont,
-                height: 1.5,
               ),
             ),
           ],
