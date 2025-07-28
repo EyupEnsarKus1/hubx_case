@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/category_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/question_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/base_screen/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/diagnose/presentation/pages/diagnose_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/diagnose/presentation/pages/diagnose_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/my_garden/presentation/pages/my_garden_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/my_garden/presentation/pages/my_garden_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/profile/presentation/pages/profile_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/profile/presentation/pages/profile_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
