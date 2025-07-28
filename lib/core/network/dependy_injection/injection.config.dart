@@ -19,6 +19,8 @@ import '../../../features/home/data/repository/home_repository_impl.dart'
     as _i152;
 import '../../../features/home/domain/repository/home_repository.dart'
     as _i1023;
+import '../../../features/home/domain/usescases/get_categories_use_case.dart'
+    as _i865;
 import '../../../features/home/domain/usescases/get_questions_use_case.dart'
     as _i1060;
 import '../../services/internett_connection_service.dart' as _i516;
@@ -32,6 +34,7 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final registerModule = _$RegisterModule();
+    gh.factory<_i865.GetCategoriesUseCase>(() => _i865.GetCategoriesUseCase());
     gh.factory<_i1060.GetQuestionsUseCase>(() => _i1060.GetQuestionsUseCase());
     gh.singleton<_i361.Dio>(() => registerModule.dio);
     gh.singleton<_i516.InternetCheckService>(

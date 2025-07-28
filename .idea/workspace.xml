@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.config.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/network/response_handler/api_response.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/network/response_handler/api_response.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/data/data_source/home_remote_data_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/data_source/home_remote_data_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/question_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/models/question_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/data/models/category_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/models/category_model.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/data/repository/home_repository_impl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/data/repository/home_repository_impl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/question_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/question_entity.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/entities/category_entity.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/entities/category_entity.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/domain/repository/home_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/repository/home_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_questions_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_questions_use_case.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_categories_use_case.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/domain/usescases/get_categories_use_case.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Flutter Test.tests in category_test.dart.executor": "Debug",
     "Flutter.main.dart.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -78,6 +76,18 @@
       <recent name="$PROJECT_DIR$/assets/icons/svg_icons/paywall" />
       <recent name="$PROJECT_DIR$/assets/images/paywall" />
     </key>
+  </component>
+  <component name="RunManager" selected="Flutter Test.tests in category_test.dart">
+    <configuration name="tests in category_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/category_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter Test.tests in category_test.dart" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SwiftWorkspaceSettings">
