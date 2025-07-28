@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
 import '../design_system/theme/hubx_colors.dart';
 
 class HubxTextField extends StatefulWidget {
@@ -119,7 +120,12 @@ class _HubxTextFieldState extends State<HubxTextField> {
     final disabledColor = widget.disabledBorderColor ?? HubxColors.textFieldBorderColor.withOpacity(.25);
     final labelStyle =
         widget.labelStyle ?? theme.textTheme.bodyMedium?.copyWith(color: widget.labelColor ?? (isDark ? HubxColors.white70 : HubxColors.hintText));
-    final hintStyle = widget.hintStyle ?? theme.textTheme.bodySmall?.copyWith(color: HubxColors.hintText);
+    final hintStyle =
+        widget.hintStyle ??
+        theme.textTheme.bodyLarge?.copyWith(
+          color: HubxColors.hintText,
+          fontFamily: HubxFonts.secondaryFont,
+        );
     final errorStyle = widget.errorStyle ?? theme.textTheme.bodySmall?.copyWith(color: errorColor, fontWeight: FontWeight.w500);
 
     return ConstrainedBox(

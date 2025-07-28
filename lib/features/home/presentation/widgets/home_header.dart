@@ -38,10 +38,7 @@ class HomeHeader extends StatelessWidget {
               ),
               12.verticalSpace,
               HubxTextField(
-                contentPadding: HubxPadding.p12.custom(
-                  left: HubxSizes.size16,
-                  right: HubxSizes.size10,
-                ),
+                contentPadding: HubxPadding.p12.onlyTop,
                 controller: TextEditingController(),
                 filled: true,
                 showBorder: true,
@@ -49,7 +46,7 @@ class HomeHeader extends StatelessWidget {
                 fillColor: HubxColors.white.withValues(alpha: .88),
                 borderRadius: 12.r,
                 prefixIcon: Padding(
-                  padding: HubxPadding.p12.all,
+                  padding: HubxPadding.p12.custom(right: 0),
                   child: HubxSvgImage(
                     assetPath: Assets.icons.home.searchIcon,
                     height: HubxSizes.size20,

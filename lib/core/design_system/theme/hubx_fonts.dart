@@ -4,6 +4,7 @@ class HubxFonts {
   HubxFonts._();
 
   static const String primaryFont = 'Roboto';
+  static const String secondaryFont = 'Rubik';
 }
 
 class HubxFontWeights {

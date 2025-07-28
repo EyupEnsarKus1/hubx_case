@@ -79,6 +79,11 @@ fonts:
         weight: 800
       - asset: assets/fonts/Roboto-Black.ttf
         weight: 900
+  - family: Rubik
+    fonts:
+      - asset: assets/fonts/Rubik-VariableFont_wght.ttf
+
+
 
 
 flutter_intl:

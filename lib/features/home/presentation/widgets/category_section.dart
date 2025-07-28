@@ -56,7 +56,7 @@ class CategoriesGrid extends StatelessWidget {
 
     return GridView.builder(
       shrinkWrap: true,
-      padding: HubxPadding.p16.horizontal,
+      padding: HubxPadding.p16.horizontal + EdgeInsets.only(bottom: 32.h),
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
