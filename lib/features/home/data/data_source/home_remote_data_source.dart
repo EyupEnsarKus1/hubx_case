@@ -37,7 +37,6 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
     return await NetworkExceptionHandler.handleException(() async {
       final response = await _dio.get(ApiRoutes.getCategories);
 
-      // Categories response'u da String olarak geldiği için fromDirectArray kullan
       final apiResponse = ApiResponse.fromDirectArray(
         response.data,
         (data) => CategoryListResponseModel.fromJson(data),

@@ -26,13 +26,13 @@ class QuestionModel extends Question {
     required this.uri,
     required this.order,
   }) : super(
-    id: id,
-    title: title,
-    subtitle: subtitle,
-    imageUri: imageUri,
-    uri: uri,
-    order: order,
-  );
+         id: id,
+         title: title,
+         subtitle: subtitle,
+         imageUri: imageUri,
+         uri: uri,
+         order: order,
+       );
 
   QuestionModel copyWith({
     int? id,
@@ -53,4 +53,20 @@ class QuestionModel extends Question {
   factory QuestionModel.fromJson(Map<String, dynamic> json) => _$QuestionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$QuestionModelToJson(this);
+}
+
+class QuestionListResponseModel {
+  final List<QuestionModel> questions;
+
+  QuestionListResponseModel({required this.questions});
+
+  factory QuestionListResponseModel.fromJsonList(List<dynamic> jsonList) {
+    return QuestionListResponseModel(
+      questions: jsonList.map((json) => QuestionModel.fromJson(json as Map<String, dynamic>)).toList(),
+    );
+  }
+
+  List<Map<String, dynamic>> toJson() {
+    return questions.map((question) => question.toJson()).toList();
+  }
 }

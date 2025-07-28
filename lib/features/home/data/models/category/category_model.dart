@@ -66,3 +66,59 @@ class CategoryModel extends Category {
 
   Map<String, dynamic> toJson() => _$CategoryModelToJson(this);
 }
+
+@JsonSerializable(explicitToJson: true)
+class CategoryListResponseModel {
+  @JsonKey(name: "data")
+  final List<CategoryModel> data;
+
+  @JsonKey(name: "meta")
+  final ResponseMeta? meta;
+
+  CategoryListResponseModel({
+    required this.data,
+    this.meta,
+  });
+
+  factory CategoryListResponseModel.fromJson(Map<String, dynamic> json) => _$CategoryListResponseModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$CategoryListResponseModelToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class ResponseMeta {
+  @JsonKey(name: "pagination")
+  final PaginationMeta? pagination;
+
+  ResponseMeta({this.pagination});
+
+  factory ResponseMeta.fromJson(Map<String, dynamic> json) => _$ResponseMetaFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ResponseMetaToJson(this);
+}
+
+@JsonSerializable(explicitToJson: false)
+class PaginationMeta {
+  @JsonKey(name: "page")
+  final int page;
+
+  @JsonKey(name: "pageSize")
+  final int pageSize;
+
+  @JsonKey(name: "pageCount")
+  final int pageCount;
+
+  @JsonKey(name: "total")
+  final int total;
+
+  PaginationMeta({
+    required this.page,
+    required this.pageSize,
+    required this.pageCount,
+    required this.total,
+  });
+
+  factory PaginationMeta.fromJson(Map<String, dynamic> json) => _$PaginationMetaFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PaginationMetaToJson(this);
+}

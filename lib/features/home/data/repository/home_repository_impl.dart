@@ -15,6 +15,7 @@ class HomeRepositoryImpl implements HomeRepository {
   Future<List<Question>> getQuestions() async {
     return await NetworkExceptionHandler.handleException(() async {
       final response = await _remoteDataSource.getQuestions();
+
       return response.questions.cast<Question>();
     });
   }
@@ -23,7 +24,8 @@ class HomeRepositoryImpl implements HomeRepository {
   Future<List<Category>> getCategories() async {
     return await NetworkExceptionHandler.handleException(() async {
       final response = await _remoteDataSource.getCategories();
-      return response.data.map((categoryModel) => categoryModel.toEntity()).toList();
+
+      return response.data.cast<Category>();
     });
   }
 }
