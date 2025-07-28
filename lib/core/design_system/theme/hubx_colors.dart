@@ -25,6 +25,7 @@ class HubxColors {
   static const Color white = Color(0xFFFFFFFF);
   static Color white30 = white.withAlpha(76);
   static Color white70 = white.withAlpha(178);
+  static const bottomNavBarBorderColor = Color(0x13231B1A);
 
   static const Color onboardLegacyTextColor = Color(0xB2597165);
   static const Color onboardDescriptionTextColor = Color(0xB213231B);

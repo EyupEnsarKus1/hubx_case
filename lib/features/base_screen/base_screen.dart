@@ -21,64 +21,60 @@ class BaseScreen extends StatelessWidget {
     return HubxScaffold(
       backgroundColor: HubxColors.scaffoldBackground,
       body: child,
+      floatingActionButton: CenterButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Container(
-        padding: HubxPadding.p8.all + EdgeInsets.only(bottom: 8.h),
+        padding: HubxPadding.p8.all,
+
         decoration: BoxDecoration(
           color: HubxColors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 10,
-              offset: const Offset(0, -5),
+          border: Border(
+            top: BorderSide(
+              color: HubxColors.bottomNavBarBorderColor,
+              width: 1.w,
             ),
-          ],
+          ),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Expanded(
-              child: NavItem(
-                index: 0,
-                icon: Assets.icons.svgIcons.home.homeIcon,
-                label: 'Home',
-                isSelected: child.currentIndex == 0,
-                onTap: () {
-                  child.goBranch(0, initialLocation: child.currentIndex == 0);
-                },
-              ),
+            NavItem(
+              index: 0,
+              icon: Assets.icons.svgIcons.home.homeIcon,
+              label: 'Home',
+              isSelected: child.currentIndex == 0,
+              onTap: () {
+                child.goBranch(0, initialLocation: child.currentIndex == 0);
+              },
             ),
-            Expanded(
-              child: NavItem(
-                index: 1,
-                icon: Assets.icons.svgIcons.home.diagnoseIcon,
-                label: 'Diagnose',
-                isSelected: child.currentIndex == 1,
-                onTap: () {
-                  child.goBranch(1, initialLocation: child.currentIndex == 1);
-                },
-              ),
+            NavItem(
+              index: 1,
+              icon: Assets.icons.svgIcons.home.diagnoseIcon,
+              label: 'Diagnose',
+              isSelected: child.currentIndex == 1,
+              onTap: () {
+                child.goBranch(1, initialLocation: child.currentIndex == 1);
+              },
             ),
-            Expanded(
-              child: NavItem(
-                index: 2,
-                icon: Assets.icons.svgIcons.home.myGardenIcon,
-                label: 'My Garden',
-                isSelected: child.currentIndex == 2,
-                onTap: () {
-                  child.goBranch(2, initialLocation: child.currentIndex == 2);
-                },
-              ),
+            30.horizontalSpace,
+            NavItem(
+              index: 2,
+              icon: Assets.icons.svgIcons.home.myGardenIcon,
+              label: 'My Garden',
+              isSelected: child.currentIndex == 2,
+              onTap: () {
+                child.goBranch(2, initialLocation: child.currentIndex == 2);
+              },
             ),
-            Expanded(
-              child: NavItem(
-                index: 3,
-                icon: Assets.icons.svgIcons.home.profileIcon,
-                label: 'Profile',
-                isSelected: child.currentIndex == 3,
-                onTap: () {
-                  child.goBranch(3, initialLocation: child.currentIndex == 3);
-                },
-              ),
+            NavItem(
+              index: 3,
+              icon: Assets.icons.svgIcons.home.profileIcon,
+              label: 'Profile',
+              isSelected: child.currentIndex == 3,
+              onTap: () {
+                child.goBranch(3, initialLocation: child.currentIndex == 3);
+              },
             ),
           ],
         ),
@@ -139,30 +135,23 @@ class CenterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 20.h),
-      child: InkWell(
-        onTap: () {},
-        borderRadius: BorderRadius.circular(30.r),
-        child: Container(
-          width: 60.w,
-          height: 60.h,
-          decoration: BoxDecoration(
-            color: HubxColors.primary,
-            borderRadius: BorderRadius.circular(30.r),
-            boxShadow: [
-              BoxShadow(
-                color: HubxColors.primary.withOpacity(0.3),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
-              ),
-            ],
+    return InkWell(
+      onTap: () {},
+      borderRadius: BorderRadius.circular(30.r),
+      child: Container(
+        padding: HubxPadding.p20.all,
+        decoration: BoxDecoration(
+          color: HubxColors.primary,
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: HubxColors.white.withValues(alpha: .24),
+            width: 4.w,
           ),
-          child: Icon(
-            Icons.camera_alt,
-            color: HubxColors.white,
-            size: HubxSizes.size24,
-          ),
+        ),
+        child: HubxSvgImage(
+          assetPath: Assets.icons.svgIcons.home.scanIcon,
+
+          color: HubxColors.white,
         ),
       ),
     );
