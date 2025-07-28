@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/services/navigation_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/services/navigation_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/onboarding/presentation/pages/onboarding_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/onboarding/presentation/pages/onboarding_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/pages/paywall_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/pages/paywall_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/paywall/presentation/widgets/paywall_header.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/category_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/category_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
