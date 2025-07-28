@@ -1,9 +1,10 @@
 import 'package:injectable/injectable.dart';
-import 'package:hubx_case/core/network/utils/generic_use_case.dart';
+
 import 'package:hubx_case/features/home/domain/entities/category_entity.dart';
 import 'package:hubx_case/features/home/domain/repository/home_repository.dart';
 
 import '../../../../core/network/dependy_injection/injection.dart';
+import '../../../../core/utils/generic_use_case.dart';
 
 @injectable
 class GetCategoriesUseCase implements UseCase<List<Category>, NoParams> {

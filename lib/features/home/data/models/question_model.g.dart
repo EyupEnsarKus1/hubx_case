@@ -6,8 +6,8 @@ part of 'question_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_QuestionModel _$QuestionModelFromJson(Map<String, dynamic> json) =>
-    _QuestionModel(
+QuestionModel _$QuestionModelFromJson(Map<String, dynamic> json) =>
+    QuestionModel(
       id: (json['id'] as num).toInt(),
       title: json['title'] as String,
       subtitle: json['subtitle'] as String,
@@ -16,7 +16,7 @@ _QuestionModel _$QuestionModelFromJson(Map<String, dynamic> json) =>
       order: (json['order'] as num).toInt(),
     );
 
-Map<String, dynamic> _$QuestionModelToJson(_QuestionModel instance) =>
+Map<String, dynamic> _$QuestionModelToJson(QuestionModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
@@ -25,15 +25,3 @@ Map<String, dynamic> _$QuestionModelToJson(_QuestionModel instance) =>
       'uri': instance.uri,
       'order': instance.order,
     };
-
-_QuestionListResponseModel _$QuestionListResponseModelFromJson(
-  Map<String, dynamic> json,
-) => _QuestionListResponseModel(
-  questions: (json['questions'] as List<dynamic>)
-      .map((e) => QuestionModel.fromJson(e as Map<String, dynamic>))
-      .toList(),
-);
-
-Map<String, dynamic> _$QuestionListResponseModelToJson(
-  _QuestionListResponseModel instance,
-) => <String, dynamic>{'questions': instance.questions};

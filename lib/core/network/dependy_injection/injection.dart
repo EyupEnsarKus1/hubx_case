@@ -3,8 +3,8 @@ import 'package:hubx_case/core/network/dependy_injection/injection.config.dart';
 import 'package:injectable/injectable.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../utils/api_routes.dart';
 import '../custom_logger/custom_logger.dart';
-import '../utils/api_routes.dart';
 
 final getIt = GetIt.instance;
 

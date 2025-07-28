@@ -1,58 +1,48 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hubx_case/features/home/domain/entities/question_entity.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-part 'question_model.freezed.dart';
 part 'question_model.g.dart';
 
-@freezed
-class QuestionModel extends Question with _$QuestionModel {
-  const QuestionModel._()
-    : super(
-        id: 0,
-        title: '',
-        subtitle: '',
-        imageUri: '',
-        uri: '',
-        order: 0,
-      );
+@JsonSerializable(explicitToJson: false)
+class QuestionModel {
+  @JsonKey(name: "id")
+  final int id;
+  @JsonKey(name: "title")
+  final String title;
+  @JsonKey(name: "subtitle")
+  final String subtitle;
+  @JsonKey(name: "image_uri")
+  final String imageUri;
+  @JsonKey(name: "uri")
+  final String uri;
+  @JsonKey(name: "order")
+  final int order;
 
-  const factory QuestionModel({
-    required int id,
-    required String title,
-    required String subtitle,
-    @JsonKey(name: 'image_uri') required String imageUri,
-    required String uri,
-    required int order,
-  }) = _QuestionModel;
+  QuestionModel({
+    required this.id,
+    required this.title,
+    required this.subtitle,
+    required this.imageUri,
+    required this.uri,
+    required this.order,
+  });
+
+  QuestionModel copyWith({
+    int? id,
+    String? title,
+    String? subtitle,
+    String? imageUri,
+    String? uri,
+    int? order,
+  }) => QuestionModel(
+    id: id ?? this.id,
+    title: title ?? this.title,
+    subtitle: subtitle ?? this.subtitle,
+    imageUri: imageUri ?? this.imageUri,
+    uri: uri ?? this.uri,
+    order: order ?? this.order,
+  );
 
   factory QuestionModel.fromJson(Map<String, dynamic> json) => _$QuestionModelFromJson(json);
 
-  @override
-  Map<String, dynamic> toJson() {
-    throw UnimplementedError();
-  }
-}
-
-@freezed
-class QuestionListResponseModel with _$QuestionListResponseModel {
-  const QuestionListResponseModel._();
-
-  const factory QuestionListResponseModel({
-    required List<QuestionModel> questions,
-  }) = _QuestionListResponseModel;
-
-  factory QuestionListResponseModel.fromJson(Map<String, dynamic> json) => _$QuestionListResponseModelFromJson(json);
-
-  factory QuestionListResponseModel.fromJsonList(List<dynamic> jsonList) => QuestionListResponseModel(
-    questions: jsonList.map((json) => QuestionModel.fromJson(json as Map<String, dynamic>)).toList(),
-  );
-
-  @override
-  List<QuestionModel> get questions => throw UnimplementedError();
-
-  @override
-  Map<String, dynamic> toJson() {
-    // TODO: implement toJson
-    throw UnimplementedError();
-  }
+  Map<String, dynamic> toJson() => _$QuestionModelToJson(this);
 }

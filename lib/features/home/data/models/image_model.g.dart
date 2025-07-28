@@ -6,11 +6,11 @@ part of 'image_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_ImageModel _$ImageModelFromJson(Map<String, dynamic> json) => _ImageModel(
+ImageModel _$ImageModelFromJson(Map<String, dynamic> json) => ImageModel(
   id: (json['id'] as num).toInt(),
   name: json['name'] as String,
-  alternativeText: json['alternativeText'] as String?,
-  caption: json['caption'] as String?,
+  alternativeText: json['alternativeText'],
+  caption: json['caption'],
   width: (json['width'] as num).toInt(),
   height: (json['height'] as num).toInt(),
   formats: json['formats'],
@@ -19,14 +19,14 @@ _ImageModel _$ImageModelFromJson(Map<String, dynamic> json) => _ImageModel(
   mime: json['mime'] as String,
   size: (json['size'] as num).toDouble(),
   url: json['url'] as String,
-  previewUrl: json['previewUrl'] as String?,
+  previewUrl: json['previewUrl'],
   provider: json['provider'] as String,
   providerMetadata: json['provider_metadata'],
-  createdAt: json['createdAt'] as String,
-  updatedAt: json['updatedAt'] as String,
+  createdAt: DateTime.parse(json['createdAt'] as String),
+  updatedAt: DateTime.parse(json['updatedAt'] as String),
 );
 
-Map<String, dynamic> _$ImageModelToJson(_ImageModel instance) =>
+Map<String, dynamic> _$ImageModelToJson(ImageModel instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
@@ -43,6 +43,6 @@ Map<String, dynamic> _$ImageModelToJson(_ImageModel instance) =>
       'previewUrl': instance.previewUrl,
       'provider': instance.provider,
       'provider_metadata': instance.providerMetadata,
-      'createdAt': instance.createdAt,
-      'updatedAt': instance.updatedAt,
+      'createdAt': instance.createdAt.toIso8601String(),
+      'updatedAt': instance.updatedAt.toIso8601String(),
     };

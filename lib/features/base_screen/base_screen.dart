@@ -25,7 +25,6 @@ class BaseScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Container(
         padding: HubxPadding.p8.all,
-
         decoration: BoxDecoration(
           color: HubxColors.white,
           border: Border(
