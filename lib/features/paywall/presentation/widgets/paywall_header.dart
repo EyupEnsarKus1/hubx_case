@@ -73,7 +73,7 @@ class PaywallHeader extends StatelessWidget {
               shape: BoxShape.circle,
             ),
             child: HubxSvgImage(
-              assetPath: Assets.icons.svgIcons.paywall.closeIcon,
+              assetPath: Assets.icons.paywall.closeIcon,
               color: HubxColors.white,
             ),
           ),

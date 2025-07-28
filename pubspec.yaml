@@ -57,9 +57,8 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
-    - assets/icons/svg_icons/
-    - assets/icons/svg_icons/paywall/
-    - assets/icons/svg_icons/home/
+    - assets/icons/home/
+    - assets/icons/paywall/
     - assets/images/background/
     - assets/images/onboard/
     - assets/images/paywall/

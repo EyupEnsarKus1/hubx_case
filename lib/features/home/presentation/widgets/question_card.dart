@@ -21,9 +21,11 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: SizedBox(
+      child: Container(
         width: 1.sw * 0.65,
         height: 1.sw * 0.45,
+        margin: HubxPadding.p4.horizontal,
+
         child: Stack(
           children: [
             Positioned.fill(
@@ -42,6 +44,8 @@ class QuestionCard extends StatelessWidget {
               child: Text(
                 question.title,
                 style: Theme.of(context).textTheme.bodyMedium,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],

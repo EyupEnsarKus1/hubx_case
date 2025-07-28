@@ -14,17 +14,17 @@ class FeatureCards extends StatelessWidget {
       FeatureModel(
         title: "Unlimited",
         description: "Plant Identify",
-        iconPath: Assets.icons.svgIcons.paywall.unlimited,
+        iconPath: Assets.icons.paywall.unlimited,
       ),
       FeatureModel(
         title: "Faster",
         description: "Process",
-        iconPath: Assets.icons.svgIcons.paywall.faster,
+        iconPath: Assets.icons.paywall.faster,
       ),
       FeatureModel(
         title: "Detailed",
         description: "Plant care",
-        iconPath: Assets.icons.svgIcons.paywall.detailed,
+        iconPath: Assets.icons.paywall.detailed,
       ),
     ];
     return SingleChildScrollView(

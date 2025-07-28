@@ -82,12 +82,20 @@ final GoRouter router = GoRouter(
   ],
 );
 
-Page<dynamic> _pageBuilder({
-  required GoRouterState state,
-  required Widget child,
-}) {
-  return NoTransitionPage(
+Page<T> _pageBuilder<T>({required GoRouterState state, required Widget child, bool maintainState = true, bool fullscreenDialog = false}) {
+  return CustomTransitionPage<T>(
     key: state.pageKey,
     child: child,
+    restorationId: state.pageKey.value,
+    maintainState: maintainState,
+    fullscreenDialog: fullscreenDialog,
+    transitionDuration: const Duration(milliseconds: 300),
+    reverseTransitionDuration: const Duration(milliseconds: 300),
+    transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      return FadeTransition(
+        opacity: animation,
+        child: child,
+      );
+    },
   );
 }

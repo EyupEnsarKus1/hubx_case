@@ -40,7 +40,7 @@ class BaseScreen extends StatelessWidget {
           children: [
             NavItem(
               index: 0,
-              icon: Assets.icons.svgIcons.home.homeIcon,
+              icon: Assets.icons.home.homeIcon,
               label: 'Home',
               isSelected: child.currentIndex == 0,
               onTap: () {
@@ -49,7 +49,7 @@ class BaseScreen extends StatelessWidget {
             ),
             NavItem(
               index: 1,
-              icon: Assets.icons.svgIcons.home.diagnoseIcon,
+              icon: Assets.icons.home.diagnoseIcon,
               label: 'Diagnose',
               isSelected: child.currentIndex == 1,
               onTap: () {
@@ -59,7 +59,7 @@ class BaseScreen extends StatelessWidget {
             30.horizontalSpace,
             NavItem(
               index: 2,
-              icon: Assets.icons.svgIcons.home.myGardenIcon,
+              icon: Assets.icons.home.myGardenIcon,
               label: 'My Garden',
               isSelected: child.currentIndex == 2,
               onTap: () {
@@ -68,7 +68,7 @@ class BaseScreen extends StatelessWidget {
             ),
             NavItem(
               index: 3,
-              icon: Assets.icons.svgIcons.home.profileIcon,
+              icon: Assets.icons.home.profileIcon,
               label: 'Profile',
               isSelected: child.currentIndex == 3,
               onTap: () {
@@ -148,7 +148,7 @@ class CenterButton extends StatelessWidget {
           ),
         ),
         child: HubxSvgImage(
-          assetPath: Assets.icons.svgIcons.home.scanIcon,
+          assetPath: Assets.icons.home.scanIcon,
 
           color: HubxColors.white,
         ),

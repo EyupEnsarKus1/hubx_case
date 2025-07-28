@@ -54,7 +54,7 @@ class QuestionsList extends StatelessWidget {
     }
 
     return SingleChildScrollView(
-      padding: HubxPadding.p16.horizontal,
+      padding: HubxPadding.p12.horizontal,
       scrollDirection: Axis.horizontal,
       child: Row(
         children: questions.map((question) {

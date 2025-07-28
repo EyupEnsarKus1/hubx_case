@@ -24,8 +24,11 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// Directory path: assets/icons/svg_icons
-  $AssetsIconsSvgIconsGen get svgIcons => const $AssetsIconsSvgIconsGen();
+  /// Directory path: assets/icons/home
+  $AssetsIconsHomeGen get home => const $AssetsIconsHomeGen();
+
+  /// Directory path: assets/icons/paywall
+  $AssetsIconsPaywallGen get paywall => const $AssetsIconsPaywallGen();
 }
 
 class $AssetsImagesGen {
@@ -41,24 +44,61 @@ class $AssetsImagesGen {
   $AssetsImagesPaywallGen get paywall => const $AssetsImagesPaywallGen();
 }
 
-class $AssetsIconsSvgIconsGen {
-  const $AssetsIconsSvgIconsGen();
+class $AssetsIconsHomeGen {
+  const $AssetsIconsHomeGen();
 
-  /// Directory path: assets/icons/svg_icons/home
-  $AssetsIconsSvgIconsHomeGen get home => const $AssetsIconsSvgIconsHomeGen();
+  /// File path: assets/icons/home/diagnose_icon.svg
+  String get diagnoseIcon => 'assets/icons/home/diagnose_icon.svg';
 
-  /// Directory path: assets/icons/svg_icons/paywall
-  $AssetsIconsSvgIconsPaywallGen get paywall => const $AssetsIconsSvgIconsPaywallGen();
+  /// File path: assets/icons/home/home_icon.svg
+  String get homeIcon => 'assets/icons/home/home_icon.svg';
+
+  /// File path: assets/icons/home/my_garden_icon.svg
+  String get myGardenIcon => 'assets/icons/home/my_garden_icon.svg';
+
+  /// File path: assets/icons/home/premium_badge.png
+  AssetGenImage get premiumBadge => const AssetGenImage('assets/icons/home/premium_badge.png');
+
+  /// File path: assets/icons/home/profile_icon.svg
+  String get profileIcon => 'assets/icons/home/profile_icon.svg';
+
+  /// File path: assets/icons/home/scan_icon.svg
+  String get scanIcon => 'assets/icons/home/scan_icon.svg';
+
+  /// List of all assets
+  List<dynamic> get values => [diagnoseIcon, homeIcon, myGardenIcon, premiumBadge, profileIcon, scanIcon];
+}
+
+class $AssetsIconsPaywallGen {
+  const $AssetsIconsPaywallGen();
+
+  /// File path: assets/icons/paywall/close_icon.svg
+  String get closeIcon => 'assets/icons/paywall/close_icon.svg';
+
+  /// File path: assets/icons/paywall/detailed.svg
+  String get detailed => 'assets/icons/paywall/detailed.svg';
+
+  /// File path: assets/icons/paywall/faster.svg
+  String get faster => 'assets/icons/paywall/faster.svg';
+
+  /// File path: assets/icons/paywall/unlimited.svg
+  String get unlimited => 'assets/icons/paywall/unlimited.svg';
+
+  /// List of all assets
+  List<String> get values => [closeIcon, detailed, faster, unlimited];
 }
 
 class $AssetsImagesBackgroundGen {
   const $AssetsImagesBackgroundGen();
 
+  /// File path: assets/images/background/home_header.png
+  AssetGenImage get homeHeader => const AssetGenImage('assets/images/background/home_header.png');
+
   /// File path: assets/images/background/onboard_screen_one_bg.png
   AssetGenImage get onboardScreenOneBg => const AssetGenImage('assets/images/background/onboard_screen_one_bg.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [onboardScreenOneBg];
+  List<AssetGenImage> get values => [homeHeader, onboardScreenOneBg];
 }
 
 class $AssetsImagesOnboardGen {
@@ -91,47 +131,6 @@ class $AssetsImagesPaywallGen {
 
   /// List of all assets
   List<AssetGenImage> get values => [paywallHeaderImage, paywallImage];
-}
-
-class $AssetsIconsSvgIconsHomeGen {
-  const $AssetsIconsSvgIconsHomeGen();
-
-  /// File path: assets/icons/svg_icons/home/diagnose_icon.svg
-  String get diagnoseIcon => 'assets/icons/svg_icons/home/diagnose_icon.svg';
-
-  /// File path: assets/icons/svg_icons/home/home_icon.svg
-  String get homeIcon => 'assets/icons/svg_icons/home/home_icon.svg';
-
-  /// File path: assets/icons/svg_icons/home/my_garden_icon.svg
-  String get myGardenIcon => 'assets/icons/svg_icons/home/my_garden_icon.svg';
-
-  /// File path: assets/icons/svg_icons/home/profile_icon.svg
-  String get profileIcon => 'assets/icons/svg_icons/home/profile_icon.svg';
-
-  /// File path: assets/icons/svg_icons/home/scan_icon.svg
-  String get scanIcon => 'assets/icons/svg_icons/home/scan_icon.svg';
-
-  /// List of all assets
-  List<String> get values => [diagnoseIcon, homeIcon, myGardenIcon, profileIcon, scanIcon];
-}
-
-class $AssetsIconsSvgIconsPaywallGen {
-  const $AssetsIconsSvgIconsPaywallGen();
-
-  /// File path: assets/icons/svg_icons/paywall/close_icon.svg
-  String get closeIcon => 'assets/icons/svg_icons/paywall/close_icon.svg';
-
-  /// File path: assets/icons/svg_icons/paywall/detailed.svg
-  String get detailed => 'assets/icons/svg_icons/paywall/detailed.svg';
-
-  /// File path: assets/icons/svg_icons/paywall/faster.svg
-  String get faster => 'assets/icons/svg_icons/paywall/faster.svg';
-
-  /// File path: assets/icons/svg_icons/paywall/unlimited.svg
-  String get unlimited => 'assets/icons/svg_icons/paywall/unlimited.svg';
-
-  /// List of all assets
-  List<String> get values => [closeIcon, detailed, faster, unlimited];
 }
 
 class Assets {
