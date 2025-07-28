@@ -39,13 +39,22 @@ class QuestionCard extends StatelessWidget {
             ),
 
             Positioned(
-              bottom: HubxSizes.size10,
-              left: HubxSizes.size14,
-              child: Text(
-                question.title,
-                style: Theme.of(context).textTheme.bodyMedium,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: 60.h,
+              child: Padding(
+                padding: HubxPadding.p14.horizontal,
+                child: Text(
+                  question.title,
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w500,
+                    fontSize: HubxSizes.size16,
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ],
