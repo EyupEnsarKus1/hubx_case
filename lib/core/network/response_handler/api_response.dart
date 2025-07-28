@@ -42,6 +42,28 @@ class ApiResponse<T> {
     return ApiResponse.fromJson(json, fromJsonT);
   }
 
+  factory ApiResponse.fromDirectArray(
+    dynamic responseData,
+    T Function(dynamic) fromJsonT,
+  ) {
+    dynamic data = responseData;
+    if (responseData is String) {
+      data = jsonDecode(responseData);
+    }
+
+    const code = 200;
+    const message = 'Success';
+    const status = true;
+
+    return ApiResponse<T>(
+      status: status,
+      message: message,
+      code: code,
+      data: fromJsonT(data),
+      meta: null,
+    );
+  }
+
   Map<String, dynamic> toJson(Map<String, dynamic> Function(T) toJsonT) {
     final result = <String, dynamic>{
       'response': {
