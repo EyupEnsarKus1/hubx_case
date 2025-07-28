@@ -5,11 +5,13 @@ import 'package:hubx_case/features/home/domain/usescases/get_categories_use_case
 import 'package:hubx_case/features/home/presentation/blocs/category_bloc/category_event.dart';
 import 'package:hubx_case/features/home/presentation/blocs/category_bloc/category_state.dart';
 
+import '../../../../../core/network/dependy_injection/injection.dart';
+
 @injectable
 class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
-  final GetCategoriesUseCase _getCategoriesUseCase;
+  GetCategoriesUseCase get _getCategoriesUseCase => getIt<GetCategoriesUseCase>();
 
-  CategoryBloc(this._getCategoriesUseCase) : super(const CategoryInitial()) {
+  CategoryBloc() : super(const CategoryInitial()) {
     on<LoadCategoriesEvent>(_onLoadCategories);
     on<RefreshCategoriesEvent>(_onRefreshCategories);
   }

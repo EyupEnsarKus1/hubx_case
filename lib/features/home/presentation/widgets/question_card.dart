@@ -21,13 +21,11 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
+      child: SizedBox(
         width: 1.sw * 0.65,
         height: 1.sw * 0.45,
-        margin: HubxPadding.p8.horizontal,
         child: Stack(
           children: [
-            // Background Image
             Positioned.fill(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(HubxSizes.size12),
@@ -38,79 +36,12 @@ class QuestionCard extends StatelessWidget {
               ),
             ),
 
-            // Glass Effect Overlay
-            Positioned.fill(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(HubxSizes.size12),
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent,
-                      HubxColors.black.withValues(alpha: 0.3),
-                      HubxColors.black.withValues(alpha: 0.6),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            // Bottom Content Container with Glass Effect
             Positioned(
-              left: 0,
-              right: 0,
-              bottom: 0,
-              child: Container(
-                padding: HubxPadding.p14.horizontal + HubxPadding.p10.vertical,
-                decoration: BoxDecoration(
-                  color: HubxColors.black.withValues(alpha: 0.20),
-                  border: Border.all(
-                    width: 1,
-                    color: HubxColors.white.withValues(alpha: 0.10),
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(12),
-                    bottomRight: Radius.circular(12),
-                  ),
-                  // Backdrop filter effect
-                  boxShadow: [
-                    BoxShadow(
-                      color: HubxColors.black.withValues(alpha: 0.1),
-                      blurRadius: 10,
-                      offset: const Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Text.rich(
-                  TextSpan(
-                    children: [
-                      TextSpan(
-                        text: question.title,
-                        style: TextStyle(
-                          color: HubxColors.white,
-                          fontSize: 15.sp,
-                          fontFamily: HubxFonts.primaryFont,
-                          fontWeight: FontWeight.w400,
-                          height: 1.33,
-                        ),
-                      ),
-                      if (question.subtitle.isNotEmpty)
-                        TextSpan(
-                          text: ' ${question.subtitle}',
-                          style: TextStyle(
-                            color: HubxColors.white,
-                            fontSize: 15.sp,
-                            fontFamily: HubxFonts.primaryFont,
-                            fontWeight: FontWeight.w500,
-                            height: 1.33,
-                          ),
-                        ),
-                    ],
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
+              bottom: HubxSizes.size10,
+              left: HubxSizes.size14,
+              child: Text(
+                question.title,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),
           ],

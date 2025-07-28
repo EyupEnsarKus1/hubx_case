@@ -16,10 +16,7 @@ class QuestionsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<QuestionBloc, QuestionState>(
       builder: (context, state) {
-        return SizedBox(
-          height: 1.sw * 0.45 + 20,
-          child: _buildContent(context, state),
-        );
+        return _buildContent(context, state);
       },
     );
   }

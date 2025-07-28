@@ -23,6 +23,10 @@ import '../../../features/home/domain/usescases/get_categories_use_case.dart'
     as _i865;
 import '../../../features/home/domain/usescases/get_questions_use_case.dart'
     as _i1060;
+import '../../../features/home/presentation/blocs/category_bloc/category_bloc.dart'
+    as _i87;
+import '../../../features/home/presentation/blocs/questions_bloc/question_bloc.dart'
+    as _i823;
 import '../../services/internett_connection_service.dart' as _i516;
 import 'injection.dart' as _i464;
 
@@ -36,6 +40,8 @@ extension GetItInjectableX on _i174.GetIt {
     final registerModule = _$RegisterModule();
     gh.factory<_i865.GetCategoriesUseCase>(() => _i865.GetCategoriesUseCase());
     gh.factory<_i1060.GetQuestionsUseCase>(() => _i1060.GetQuestionsUseCase());
+    gh.factory<_i823.QuestionBloc>(() => _i823.QuestionBloc());
+    gh.factory<_i87.CategoryBloc>(() => _i87.CategoryBloc());
     gh.singleton<_i361.Dio>(() => registerModule.dio);
     gh.singleton<_i516.InternetCheckService>(
       () => _i516.InternetCheckService(),

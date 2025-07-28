@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2f3bb48d-8776-403d-9986-50acaeb3716f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/design_system/theme/hubx_colors.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.config.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/network/dependy_injection/injection.config.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/blocs/category_bloc/category_bloc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/blocs/category_bloc/category_bloc.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/pages/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/category_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/category_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/category_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/category_section.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/question_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/question_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/features/home/presentation/widgets/questions_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/home/presentation/widgets/questions_section.dart" afterDir="false" />
     </list>
@@ -50,7 +55,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "network__structre",
+    "git-widget-placeholder": "develop",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/eyupensarkus/Documents/GitHub/hubx_case/lib/features/profile",
