@@ -1,5 +1,33 @@
 # 🌱 HubX Case - Flutter Proje Dokümantasyonu
 
+## 📱 Uygulama Ekran Görüntüleri
+
+### 🚀 Onboarding Akışı
+Uygulamanın kullanıcı karşılama ve tanıtım akışını gösteren ekranlar:
+
+![Onboarding Ekran 1](assets/screenshots/onboard_one.png)
+*İlk karşılama ekranı - Uygulamanın ana değer önerisi*
+
+![Onboarding Ekran 2](assets/screenshots/onboard_two.png)
+*İkinci tanıtım ekranı - Bitki bakım özelliklerinin açıklanması*
+
+![Onboarding Ekran 3](assets/screenshots/onboard_three.png)
+*Üçüncü tanıtım ekranı - Foto çekme ve tanıma özelliği*
+
+### 🏠 Ana Sayfa
+Uygulamanın merkezi hub'ı olan ana sayfa:
+
+![Ana Sayfa](assets/screenshots/home_page.png)
+*Ana sayfa - Kategoriler, sorular ve premium özellikler*
+
+### 💎 Premium Paywall
+Premium özelliklere erişim için tasarlanmış paywall ekranı:
+
+![Paywall Sayfası](assets/screenshots/paywall_page.png)
+*Premium özellikler ve abonelik planları*
+
+---
+
 ## 📋 Proje Genel Bakış
 
 **HubX Case**, modern Flutter teknolojileri kullanılarak geliştirilmiş, bitki tanıma ve bakım uygulamasıdır. Proje, Clean Architecture prensiplerine sadık kalarak, ölçeklenebilir ve sürdürülebilir bir kod yapısı sunmaktadır.
