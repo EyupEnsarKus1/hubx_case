@@ -32,6 +32,7 @@ dependencies:
   shimmer: ^3.0.0
   cached_network_image: ^3.4.1
   flutter_svg: ^2.2.0
+  connectivity_plus: ^6.1.4
   injectable: ^2.5.0
   flutter_localizations:
     sdk: flutter
@@ -45,7 +46,6 @@ dev_dependencies:
   injectable_generator: ^2.7.0
   build_runner: ^2.4.15
   flutter_gen_runner: ^5.10.0
-  connectivity_plus: ^6.1.4
   bloc_test: ^10.0.0
   mocktail: ^1.0.4
 
