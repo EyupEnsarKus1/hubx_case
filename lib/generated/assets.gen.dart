@@ -14,11 +14,29 @@ import 'package:flutter/widgets.dart';
 class $AssetsFontsGen {
   const $AssetsFontsGen();
 
-  /// File path: assets/fonts/Roboto.ttf
-  String get roboto => 'assets/fonts/Roboto.ttf';
+  /// File path: assets/fonts/Roboto-Black.ttf
+  String get robotoBlack => 'assets/fonts/Roboto-Black.ttf';
+
+  /// File path: assets/fonts/Roboto-Bold.ttf
+  String get robotoBold => 'assets/fonts/Roboto-Bold.ttf';
+
+  /// File path: assets/fonts/Roboto-ExtraBold.ttf
+  String get robotoExtraBold => 'assets/fonts/Roboto-ExtraBold.ttf';
+
+  /// File path: assets/fonts/Roboto-Light.ttf
+  String get robotoLight => 'assets/fonts/Roboto-Light.ttf';
+
+  /// File path: assets/fonts/Roboto-Medium.ttf
+  String get robotoMedium => 'assets/fonts/Roboto-Medium.ttf';
+
+  /// File path: assets/fonts/Roboto-Regular.ttf
+  String get robotoRegular => 'assets/fonts/Roboto-Regular.ttf';
+
+  /// File path: assets/fonts/Roboto-SemiBold.ttf
+  String get robotoSemiBold => 'assets/fonts/Roboto-SemiBold.ttf';
 
   /// List of all assets
-  List<String> get values => [roboto];
+  List<String> get values => [robotoBlack, robotoBold, robotoExtraBold, robotoLight, robotoMedium, robotoRegular, robotoSemiBold];
 }
 
 class $AssetsIconsGen {
