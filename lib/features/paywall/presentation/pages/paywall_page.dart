@@ -37,6 +37,10 @@ class _PaywallPageState extends State<PaywallPage> {
     });
   }
 
+  void _closePaywall() {
+    context.go(HomePage.routePath);
+  }
+
   @override
   Widget build(BuildContext context) {
     return HubxScaffold(
@@ -44,7 +48,7 @@ class _PaywallPageState extends State<PaywallPage> {
         color: HubxColors.paywallBackground,
         child: Column(
           children: [
-            const PaywallHeader(),
+            PaywallHeader(onClose: _closePaywall),
             const FeatureCards(),
             ...subscriptions
                 .map(

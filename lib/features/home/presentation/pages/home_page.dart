@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_images_widgets.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
@@ -12,14 +13,30 @@ import 'package:hubx_case/features/home/presentation/blocs/category_bloc/categor
 import 'package:hubx_case/features/home/presentation/widgets/premium_card.dart';
 import 'package:hubx_case/features/home/presentation/widgets/questions_section.dart';
 import 'package:hubx_case/features/home/presentation/widgets/category_section.dart';
+import 'package:hubx_case/features/paywall/presentation/pages/paywall_page.dart';
 
 import '../../../../generated/assets.gen.dart';
 import '../widgets/home_header.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   static const String routeName = '/home';
   static const String routePath = '/home';
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2), () {
+      if (mounted) {
+        context.go(PaywallPage.routePath);
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -31,7 +31,11 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: PaywallPage.routePath,
       name: PaywallPage.routeName,
-      pageBuilder: (context, state) => _pageBuilder(state: state, child: const PaywallPage()),
+      pageBuilder: (context, state) => _pageBuilder(
+        state: state,
+        child: const PaywallPage(),
+        fullscreenDialog: true,
+      ),
     ),
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
@@ -101,6 +105,21 @@ Page<T> _pageBuilder<T>({required GoRouterState state, required Widget child, bo
     transitionDuration: const Duration(milliseconds: 300),
     reverseTransitionDuration: const Duration(milliseconds: 300),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
+      if (state.uri.path == PaywallPage.routePath) {
+        return SlideTransition(
+          position:
+              Tween<Offset>(
+                begin: const Offset(0, 1),
+                end: Offset.zero,
+              ).animate(
+                CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeInOut,
+                ),
+              ),
+          child: child,
+        );
+      }
       return FadeTransition(
         opacity: animation,
         child: child,

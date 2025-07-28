@@ -38,7 +38,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
     final onBoardService = OnBoardService();
     await onBoardService.setHasSeenOnBoarding();
     if (mounted) {
-      context.go(PaywallPage.routePath);
+      context.go(HomePage.routePath);
     }
   }
 

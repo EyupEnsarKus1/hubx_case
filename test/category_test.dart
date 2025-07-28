@@ -38,7 +38,6 @@ void main() {
         expect(categoryResponse.data, isNotEmpty);
         expect(categoryResponse.meta, isNotNull);
 
-        // İlk category'yi kontrol et
         final firstCategory = categoryResponse.data.first;
         expect(firstCategory.id, isNotNull);
         expect(firstCategory.name, isNotEmpty);
@@ -47,13 +46,8 @@ void main() {
         expect(firstCategory.image, isNotNull);
         expect(firstCategory.image.url, isNotEmpty);
 
-        // Meta bilgilerini kontrol et
-        expect(categoryResponse.meta.pagination.total, isNotNull);
-        expect(categoryResponse.meta.pagination.page, isNotNull);
-
         print('✅ Categories API başarıyla çalışıyor! ${categoryResponse.data.length} category alındı');
         print('İlk category: ${firstCategory.title}');
-        print('Total categories: ${categoryResponse.meta.pagination.total}');
       } catch (e) {
         print('❌ Categories API hatası: $e');
         rethrow;

@@ -8,8 +8,28 @@ import '../../../../core/design_system/theme/hubx_fonts.dart';
 import '../../../../generated/assets.gen.dart';
 import 'feature_cards.dart';
 
-class PaywallHeader extends StatelessWidget {
-  const PaywallHeader({super.key});
+class PaywallHeader extends StatefulWidget {
+  final VoidCallback? onClose;
+  const PaywallHeader({super.key, this.onClose});
+
+  @override
+  State<PaywallHeader> createState() => _PaywallHeaderState();
+}
+
+class _PaywallHeaderState extends State<PaywallHeader> {
+  bool _showCloseIcon = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 3), () {
+      if (mounted) {
+        setState(() {
+          _showCloseIcon = true;
+        });
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,20 +84,24 @@ class PaywallHeader extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          right: 20.w,
-          top: MediaQuery.of(context).padding.top,
-          child: Container(
-            decoration: BoxDecoration(
-              color: HubxColors.black.withValues(alpha: .4),
-              shape: BoxShape.circle,
-            ),
-            child: HubxSvgImage(
-              assetPath: Assets.icons.paywall.closeIcon,
-              color: HubxColors.white,
+        if (_showCloseIcon)
+          Positioned(
+            right: 20.w,
+            top: MediaQuery.of(context).padding.top,
+            child: GestureDetector(
+              onTap: widget.onClose,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: HubxColors.black.withValues(alpha: .4),
+                  shape: BoxShape.circle,
+                ),
+                child: HubxSvgImage(
+                  assetPath: Assets.icons.paywall.closeIcon,
+                  color: HubxColors.white,
+                ),
+              ),
             ),
           ),
-        ),
       ],
     );
   }
