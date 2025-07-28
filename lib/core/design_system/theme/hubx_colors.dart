@@ -32,4 +32,9 @@ class HubxColors {
 
   static const Color onboardLegacyTextColor = Color(0xB2597165);
   static const Color onboardDescriptionTextColor = Color(0xB213231B);
+
+  // Premium Card Colors
+  static const Color premiumGold = Color(0xFFE5C990);
+  static const Color premiumGoldLight = Color(0xCCFFDE9C);
+  static const Color premiumShadow = Color(0xFF000000);
 }

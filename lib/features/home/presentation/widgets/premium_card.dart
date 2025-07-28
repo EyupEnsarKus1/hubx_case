@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hubx_case/core/custom_widgets/hubx_images_widgets.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_colors.dart';
+import 'package:hubx_case/core/design_system/theme/hubx_fonts.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_padding.dart';
 import 'package:hubx_case/core/design_system/theme/hubx_sizes.dart';
 import 'package:hubx_case/features/paywall/presentation/pages/paywall_page.dart';
@@ -26,9 +27,7 @@ class PremiumCard extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: HubxColors.premiumCardBg,
-          borderRadius: BorderRadius.circular(
-            HubxSizes.size12,
-          ),
+          borderRadius: BorderRadius.circular(HubxSizes.size12),
         ),
         child: Row(
           children: [
@@ -37,7 +36,7 @@ class PremiumCard extends StatelessWidget {
               width: HubxSizes.size40,
               height: HubxSizes.size40,
             ),
-            12.horizontalSpace,
+            HubxSizes.size12.horizontalSpace,
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,23 +47,36 @@ class PremiumCard extends StatelessWidget {
                         TextSpan(
                           text: 'FREE',
                           style: TextStyle(
-                            color: const Color(0xFFE5C990),
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w700,
+                            color: HubxColors.premiumGold,
+                            fontSize: HubxSizes.size16,
+                            fontFamily: HubxFonts.primaryFont,
+                            fontWeight: HubxFontWeights.bold,
                             height: 1.31,
-                            shadows: [Shadow(offset: Offset(0, 2), blurRadius: 4, color: Color(0xFF000000).withOpacity(0.32))],
+
+                            shadows: [
+                              Shadow(
+                                offset: const Offset(0, 2),
+                                blurRadius: 4,
+                                color: HubxColors.premiumShadow.withOpacity(0.32),
+                              ),
+                            ],
                           ),
                         ),
                         TextSpan(
                           text: ' Premium Available',
                           style: TextStyle(
-                            color: const Color(0xFFE5C990),
-                            fontSize: 16,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w600,
+                            color: HubxColors.premiumGold,
+                            fontSize: HubxSizes.size16,
+                            fontFamily: HubxFonts.primaryFont,
+                            fontWeight: HubxFontWeights.semiBold,
                             height: 1.31,
-                            shadows: [Shadow(offset: Offset(0, 2), blurRadius: 4, color: Color(0xFF000000).withOpacity(0.32))],
+                            shadows: [
+                              Shadow(
+                                offset: const Offset(0, 2),
+                                blurRadius: 4,
+                                color: HubxColors.premiumShadow.withOpacity(0.32),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -73,10 +85,10 @@ class PremiumCard extends StatelessWidget {
                   Text(
                     'Tap to upgrade your account!',
                     style: TextStyle(
-                      color: const Color(0xCCFFDE9C),
-                      fontSize: 13,
-                      fontFamily: 'Roboto',
-                      fontWeight: FontWeight.w400,
+                      color: HubxColors.premiumGoldLight,
+                      fontSize: 13.sp,
+                      fontFamily: HubxFonts.primaryFont,
+                      fontWeight: HubxFontWeights.regular,
                       height: 1.23,
                     ),
                   ),
